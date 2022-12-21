@@ -1,0 +1,24 @@
+---
+import Frame from '../layouts/frame.astro';
+import "./contact.scss";
+
+import ContactForm from '../components/ContactForm.astro';
+import Carousel from '../components/Carousel.astro';
+
+import tick from '../media/icons/tick.svg'
+---
+
+<Frame title={' - Contact'} description={'Please get in touch if you wish to enquire'}>
+    <div class="contact bs">
+        <h3 class="bs-title">Contact Us</h3>
+        
+        <form class="sent">
+            <img src={tick} alt="green tick" class="tick">
+            <h4 class="sent-text">Message Sent!</h4>
+            <p class="bs-text">Thank you for your message, we'll reply within the next few days.</p>
+        </form>
+        
+    </div>
+
+    <Carousel/>
+</Frame>

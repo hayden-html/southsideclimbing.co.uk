@@ -1,0 +1,116 @@
+---
+
+---
+
+<div class="contact bs">
+    <h3 class="bs-title">Contact Us</h3>
+
+    <form action="https://api.web3forms.com/submit" method="POST" onsubmit="validateForm()">
+        <input type="hidden" name="access_key" value="1c2ab10e-af67-490e-b5ca-32ec4a2df71f">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label class="error" id="nameError"></label>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label class="error" id="emailError"></label>
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" required>
+        <label class="error" id="phoneError"></label>
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+        <label class="error" id="messageError"></label>
+        <button type="submit" class="bs-button contact-form-button">Send</button>
+    </form>
+
+</div>
+
+<script lang="js">
+    function validateForm() {
+    let valid = true;
+    let name = document.getElementById('name').value;
+    let nameErr = document.getElementById('nameError');
+    if (name == "" || name.length < 2 || !/[a-zA-Z]$/.test(name)) {
+      nameErr.innerText = "Name must be filled out";
+      return valid = false;
+    } else {nameErr.innerText = "";}
+    let email = document.getElementById('email').value;
+    let emailErr = document.getElementById('emailError');
+    if (email == "" || !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      emailErr.innerText = "Please enter a valid email";
+      return valid = false;
+    } else {emailErr.innerText = "";}
+    let phone = document.getElementById('phone').value;
+    let phoneErr = document.getElementById('phoneError');
+    if (phone == "" || phone.length < 10 || !/[0-9]/.test(phone)) {
+      phoneErr.innerText = "Please enter a valid phone number";
+      return valid = false;
+    } else {phoneErr.innerText = "";}
+    let message = document.getElementById('message').value;
+    let messageErr = document.getElementById('messageError');
+    if (message == "" || message.length > 50 || !/[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gm.test(message)) {
+      messageErr.innerText = "Please enter a valid message with no web or email addresses";
+      return valid = false;
+    }  else {Err.innerText = "";}
+  
+    if(valid = false){
+      return false;
+    } else {
+        window.location.replace("https://www.southsideclimbing.co.uk/sent");
+    }
+  }
+</script>
+
+<style lang="scss">
+        .contact {
+        form {
+            padding-left: 20px;
+
+            * {
+                display: block;
+            }
+
+            label {
+                margin-top: 10px;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 1.5em;
+                color: #484848;
+            }
+
+            input,
+            textarea {
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.2em;
+                font-weight: 400;
+                color: #2e2e2e;
+                padding: 5px 7px;
+                margin-top: 3px;
+                border: 2px solid rgb(133, 242, 242);
+                max-width: 90%;
+            }
+
+            textarea {
+                width: 90%;
+            }
+
+            button {
+                border-radius: 10px;
+                border: none;
+                color: #F2F2F2;
+                background-color: #1fb8c0;
+                padding: 5px 20px;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 600;
+                margin-bottom: 10px;
+
+                &:active {
+                    background-color: #048b92;
+                }
+            }
+        }
+    }
+
+</style>
+

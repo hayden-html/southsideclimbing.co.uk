@@ -1,0 +1,84 @@
+---
+import Frame from '../layouts/frame.astro';
+import Carousel from '../components/Carousel.astro';
+import ContactForm from '../components/ContactForm.astro';
+
+// import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+// import CookiePopUp from '../components/CookiePopUp.astro';
+import "../styles/index.scss";
+import warmLove from '../media/warm-love.jpg'
+import belay from "../media/belay.jpg"
+import gearing from "../media/gearing-up.jpg"
+import hayden from "../media/hayden-hang.jpg"
+import haydenMob from "../media/hayden-hang-mob.jpg"
+
+---
+<Frame title="" desc="Experience climbing with Southside Climbing. We our based in Dorset, and run climbing sessions for beginners at Portland. You can learn to climb and belay your friends and family!">
+	
+			
+				<div class="hero">
+					<h2 class="bs">Experience Climbing Dorset</h2>
+					<img src={warmLove} alt="A young man climbing in the sunset with the sea behind him"
+						class="hero-img">
+				</div>
+	
+				<p class="intro bs">At Southside Climbing we want to share the
+					joy and adventure of climbing in the south coast. Our sessions are for range from beginners to experienced
+					climbers. <span class="intro-desk">You'll also get to take in the stunning views of Dorset and it's
+						wildlife!</span>
+				</p>
+	
+				<div class="sessions bs">
+					<div class="sessions-text">
+						<h3 class="bs-title">Our sessions</h3>
+						<p class="bs-text">We run a variety of different sessions in Dorset. Whether you are looking to try
+							something new or you want an action packed holiday, there's something for you.</p>
+						<a class="sessions-butt bs-button sessions-butt-desk"
+							href="./sessions">See
+							Sessions</a>
+					</div>
+					<div class="sessions-img">
+						<img src={belay} alt="Myself belaying from my harness, gripping the climbing rope"
+							class="sessions-img-belay">
+						<img src={gearing} alt="Myself gearing up, and passing karabiners to sam"
+							class="sessions-img-setup">
+	
+					</div>
+					<a class="sessions-butt bs-button sessions-butt-mob"
+						href="./sessions">See
+						Sessions</a>
+				</div>
+	
+				<div class="hayden bs">
+					<h3 class="bs-title">About Me</h3>
+					<div class="hayden-textbox">
+						<p class="hayden-text bs-text">"Hello, I'm Hayden, the owner of Southside Climbing. I've
+							been climbing since I was 15, since then it's become a huge part of my life. I love climbing because
+							it challenges me physically and mentally. There's always a climb that I'm challenging myself on,
+							once I've climbed something I've worked, on I get a real sense of achievement. Climbing is for
+							everyone, I'm proud to be part of such a friendly and diverse communitity."</p>
+						<!-- <div class="hayden-extend"><img src="./media/icons/down-arr.svg" alt="down arrow" class="hayden-arr"></div> -->
+						<!-- https://www.w3schools.com/howto/howto_js_read_more.asp -->
+					</div>
+					<div class="flex">
+						<img src={hayden} alt="Hayden sat in his harness, suspended next to the rock"
+							class="hayden-img">
+						<img src={haydenMob} alt="Hayden sat in his harness, suspended next to the rock"
+							class="hayden-img-mob">
+						<ul class="bs-text quals">
+							<h4>Qualifications:</h4>
+							<li>Rock Climbing Instructor</li>
+							<li>Climbing Wall Instructor</li>
+							<li>Foundation Coach</li>
+							<li>First Aid in the Outdoors</li>
+							<li>Safeguarding in Sport</li>
+	
+						</ul>
+					</div>
+				</div>
+	
+				<Carousel />
+				<ContactForm />
+			
+</Frame>
+

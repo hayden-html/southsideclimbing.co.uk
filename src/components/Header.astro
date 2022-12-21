@@ -1,0 +1,231 @@
+---
+import logo from "../media/logo.svg";
+import title from "../media/logo-text-white.svg";
+import burger from "../media/icons/burger.svg";
+import close from "../media/icons/close.svg";
+import facebook from "../media/icons/facebook.svg";
+import insta from "../media/icons/instagram.svg";
+
+
+
+---
+
+<nav>
+  <a class="title" href="/">
+    <img src={logo} alt="An ocean wave with a pink sky" class="logo" />
+    <img src={title} alt="Southside Climbing" class="logo-title" />
+  </a>
+
+  <div class="links">
+    <a href="../sessions" class="links-a">Sessions</a>
+    <a href="../contact" class="links-a">Contact</a>
+  </div>
+  <div class="burger" id="burger">
+    <img src={burger} alt="burger menu" />
+  </div>
+  <div class="mob-menu none">
+    <div class="mob-menu-background"></div>
+    <div class="mob-menu-list">
+      <div class="close" id="close">
+        <img src={close} alt="cross to close menu" />
+      </div>
+      <a href="../sessions" class="mob-menu-list-item links-a">Sessions</a>
+      <a href="../contact" class="mob-menu-list-item links-a">Contact</a>
+      <div class="mob-menu-socials socials">
+                    <a href="https://www.facebook.com/southsideclimbing/" class="socials-fb"><img src={facebook}
+                        alt="facebook logo"></a>
+                <a href="https://www.instagram.com/southsideclimbing/" class="socials-insta"><img src={insta}
+                        alt="facebook logo"></a>
+                </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  function openMenu(){
+		const mobMenu = document.querySelector('.mob-menu');
+		// console.log('open')
+		mobMenu?.classList.remove('none');
+	}
+	
+	document.getElementById('burger')?.addEventListener('click', openMenu);
+	document.getElementById('close')?.addEventListener('click', closeMenu);
+
+function closeMenu(){
+    // console.log('closed')
+    const mobMenu = document.querySelector('.mob-menu');
+    mobMenu?.classList.add('none');
+}
+
+
+</script>
+<style lang="scss">
+  nav {
+    background-color: #2eada4;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    .title {
+      display: flex;
+
+      .logo {
+        height: 45px;
+        margin: auto 10px auto 0;
+      }
+
+      .logo-title {
+        height: 30px;
+        margin: auto 0;
+      }
+    }
+
+    .burger {
+      display: none;
+    }
+
+    .links {
+      height: 70px;
+      display: flex;
+
+      &-a {
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: 1.8em;
+        font-weight: 500;
+        color: #ffffff;
+        text-decoration: none;
+        margin: auto 10px auto 20px;
+      }
+    }
+
+    .mob-menu {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    nav {
+      .title {
+        .logo {
+          // height: 55px;
+          // margin-left: 10px;
+          color: #01339f;
+          // &-title {
+          // height: 30px;
+          // }
+        }
+      }
+
+      .burger {
+        display: block;
+        margin: auto 0;
+      }
+
+      .links {
+        display: none;
+        &-a {
+          margin: 0 0 10px;
+        }
+      }
+
+      .mob-menu {
+        z-index: 2;
+        position: fixed;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+
+        &-background {
+          background-color: #0728266e;
+          width: 100vw;
+          display: block;
+        }
+
+        &-list {
+          background-color: #16867e;
+          // right: 0;
+          box-sizing: border-box;
+          padding: 25px 25px;
+          display: flex;
+          flex-direction: column;
+          min-width: 240px;
+          height: 100%;
+
+          .close {
+            margin-left: auto;
+            width: min-content;
+            img {
+              height: 35px;
+            }
+          }
+
+          &-item {
+            font-size: 2.2em;
+          }
+        }
+
+        &-socials {
+          margin-top: auto;
+        }
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    nav {
+        .title {
+            .logo {
+                width: 50px;
+                
+                &-title {
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+
+
+    nav {
+        .title {
+            .logo {
+                width: 40px;
+                margin-right: 7px;
+                
+                &-title {
+                    height: 21px;
+                }
+            }
+        }
+
+        .burger {
+            height: fit-content;
+
+            img {
+                height: 25px;
+                margin-right: 10px;
+            }
+        }
+
+        .mob-menu {
+            &-list {
+                &-item {
+                    font-size: 2em;
+                }
+
+            }
+        }
+
+        .close {
+            margin-bottom: 5px;
+        }
+    }
+
+}
+</style>

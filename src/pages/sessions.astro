@@ -1,0 +1,81 @@
+---
+import Frame from '../layouts/frame.astro';
+import './sessions.scss'
+
+import L2B from '../media/L2B.jpg'
+import stanage from '../media/stanage-popular.jpg'
+import groups from '../media/groups.jpg'
+---
+
+<Frame title={' - Sessions'} description={'We run a variety of climbing sessions.'}>
+
+
+        <div class="L2B bs">
+            <h3 class="bs-title">Learn to Belay</h3>
+            <div class="session-layout">
+                    <img src={L2B} alt="Hayden sat in his harness, suspended next to the rock"
+                        class="L2B-img">
+                <div class="session-info">
+                    <div class="session-sub"><span class="session-sub-li">8 Hours · </span><span
+                            class="session-sub-li">2-6 Climbers · </span><span class="session-sub-li"></span>
+                    </div>
+                    <p class="session-text bs-text">This sessions is ideal for newcomers to roped climbing. You’ll learn all there is to knots, belaying and climbing.</p>
+
+                    <div class="session-buttons">
+                        <script is:inline src="https://assets.ticketinghub.com/checkout.js" data-widget="3d0b09ea-1f3a-4b3c-90de-8f7ce8ea28b1"></script>
+                        <a href="./sessions/learn-to-belay" class="session-see">See More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="peak bs">
+            <h3 class="bs-title">Peak District</h3>
+                <img src={stanage} alt="Hayden sat in his harness, suspended next to the rock"
+                    class="peak-img">
+            <div class="session-layout-block">
+                <div class="session-info session-info">
+                    <div class="session-sub">
+                        <span class="session-sub-li">2 Days · </span>
+                        <span class="session-sub-li">2-6 Climbers · </span>
+                        <span class="session-sub-li">Beginners</span>
+                    </div>
+                    <p class="session-text bs-text">We run 3 hour sessions in small groups. You can view our prices and
+                        book
+                        through Airbnb. For private
+                        session, please contact us on the form below.</p>
+
+                    <div class="session-buttons">
+                        <script is:inline src="https://assets.ticketinghub.com/checkout.js" data-widget="c3a9cc0d-1372-40bf-a960-8318846ee538"></script>
+                        <a href="./sessions/peak-district.html" class="session-see">See More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="groups bs">
+            <h3 class="bs-title">Group Bookings</h3>
+            <div class="session-layout group-layout">
+                <div class="session-info group-info">
+                    <div class="session-sub"><span
+                            class="session-sub-li">6+ Climbers · Stag & Hen Parties</span>
+                    </div>
+                    <p class="session-text bs-text">We run 3 hour sessions in small groups. You can view our prices and
+                        book
+                        through Airbnb. For private
+                        session, please contact us on the form below.</p>
+
+                    
+                        <div class="session-buttons">
+                            <a href="./contact" class="session-see
+                            bs-button-contact">Contact Us</a>
+                        </div>
+                </div>
+                <img src={groups} alt="Hayden sat in his harness, suspended next to the rock"
+                        class="group-img">
+            </div>
+        </div>
+
+
+</Frame>

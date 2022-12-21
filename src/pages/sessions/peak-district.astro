@@ -1,0 +1,62 @@
+---
+import './learn-belay.scss'
+import Frame from '../../layouts/frame.astro'
+import Accordian from '../../components/Accordian.astro'
+import Qa from '../../components/parts/Qa.astro'
+import stanage from '../../media/stanage-popular.jpg'
+import Helmet from '../../media/icons/helmet.svg'
+---
+
+<Frame>
+  
+    
+        <div class="seshpage bs">
+            <h2 class="bs-title seshpage-title">Peak District</h2>
+            <div class="seshpage-options">
+                <img class="seshpage-img" src={stanage}
+                    alt="A middle-aged woman smiling whilst suspended off a rope with the sea behind her">
+                <div class="seshpage-info">
+                    <div class="seshpage-info">
+                        <div class="seshpage-desc"><span class="seshpage-sub-li">2 Days · </span><span
+                                class="seshpage-sub-li">1-6 Climbers · </span><span class="seshpage-sub-li">Ages
+                                7+</span>
+                        </div>
+                    <p class="private-text bs-text">The Peak District is our favourite place to climb in the UK. The
+                        rock is made of gritstone which feels rough and grippy to climb. We're running limited 2 day
+                        sessions to give you an opportunity to experience the peaks. you be climbing cracks not far from
+                        Hathersage including Stanage edge Froggatt or Bamford. We do not offer accomadation, however, we recommend the cosy pods at North Lees Campsite.</p>
+                </div>
+                <div class="seshpage-info private-info">
+
+                        <div class="seshpage-buttons">
+                            <script src="https://assets.ticketinghub.com/checkout.js"
+                                data-widget="c3a9cc0d-1372-40bf-a960-8318846ee538"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>S
+    
+        <div class="included bs">
+            <div class="gear">
+                <img class="gear-img" src={Helmet} alt="helmet icon">
+                <div class="gear-text">All Equipment Included</div>
+            </div>
+            <div class="divide"></div>
+            <div class="bring">
+                <h4 class="bring-title">You'll Need:</h4>
+                <ul>
+                    <li>A sturdy pair of shoes</li>
+                    <li>Lunch, snacks & water</li>
+                    <li>A jumper and waterproof</li>
+                </ul>
+            </div>
+        </div>
+        
+        <Accordian>
+            <Qa question="Where will I meet my Instructor?" ans="We will send you an exact location once we receive a good forecast. We’ll get in touch a couple of days before your session."/>
+            <Qa question="Can I bring my dog?" ans="Your welcome to bring your dog on our private session as long as you will have enough people in your group to supervise your dog whilst you climb. Please let us know beforehand, as this affects where we will climb."/>
+            <Qa question="May I bring spectators?" ans="On our private sessions spectators are welcome to join as long as the total group size (including spectators) doesn’t exceed 6. Please let us know if your planning on brining a spectator."/>
+        </Accordian>
+
+</Frame>
