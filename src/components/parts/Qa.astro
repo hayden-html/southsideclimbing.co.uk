@@ -1,5 +1,5 @@
 ---
-import Arr from "../../media/icons/down-arr.svg"
+
 const { question, ans } = Astro.props
 
 export interface Props {
@@ -8,7 +8,7 @@ export interface Props {
 }
 ---
 
-<div class="question" id="question"><p>{question}</p><img class="question-arr" src={Arr}> </div>
+<div class="question" id="question"><p>{question}</p><img class="question-arr" src="/media/icons/down-arr.svg"> </div>
 <div class="answer">
   <p>{ans}</p>
 </div>
