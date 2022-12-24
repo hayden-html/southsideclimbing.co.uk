@@ -3,9 +3,6 @@ import Frame from '../layouts/frame.astro';
 import "./contact.scss";
 
 import ContactForm from '../components/ContactForm.astro';
-
-import whatsapp from '../media/icons/whatsapp.svg'
-import email from '../media/icons/email.svg'
 ---
 
 <Frame title={' - Contact'} description={'Please get in touch if you wish to enquire'}>
@@ -13,8 +10,8 @@ import email from '../media/icons/email.svg'
     <div class="details bs">
         <div class="bs-title">Our Details</div>
         <div class="options">
-            <div class="tel"><img src={whatsapp} class="tel-img" alt="whatsapp"><a href="tel:+447767048893" class="details-a bs-text tel-text ">+44 7707 162505</a></div>
-            <div class="email"><img src={email} alt="email" class="email-img"><a href="mailto:hayden@southsideclimbing.co.uk" class="details-a bs-text email-text">hayden@southsideclimbing.co.uk</a></div>
+            <div class="tel"><img src="/media/icons/whatsapp.svg" class="tel-img" alt="whatsapp"><a href="tel:+447767048893" class="details-a bs-text tel-text ">+44 7707 162505</a></div>
+            <div class="email"><img src="/media/icons/email.svg" alt="email" class="email-img"><a href="mailto:hayden@southsideclimbing.co.uk" class="details-a bs-text email-text">hayden@southsideclimbing.co.uk</a></div>
         </div>
 
     </div>

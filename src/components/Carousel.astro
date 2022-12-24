@@ -1,10 +1,5 @@
 ---
-import img1 from '../media/carousel-1.jpg'
-import img2 from '../media/carousel-2.jpg'
-import img3 from '../media/carousel-3.jpg'
-import img4 from '../media/carousel-4.jpg'
-import img5 from '../media/carousel-5.jpg'
-import img6 from '../media/carousel-6.jpg'
+
 
 import leftArr from '../media/icons/left-arr.svg'
 import rightArr from '../media/icons/right-arr.svg'
@@ -17,27 +12,27 @@ import rightArr from '../media/icons/right-arr.svg'
 
 <div class="slideshow-container">
     <div class="mySlides fade">
-        <img src={img1} class="carousel-img">
+        <img src="/media/carousel-1.jpg" class="carousel-img">
     </div>
 
     <div class="mySlides fade">
-        <img src={img2} class="carousel-img">
+        <img src='/media/carousel-2.jpg' class="carousel-img">
     </div>
 
     <div class="mySlides fade">
-        <img src={img3} class="carousel-img">
+        <img src='/media/carousel-3.jpg' class="carousel-img">
     </div>
 
     <div class="mySlides fade">
-        <img src={img4} class="carousel-img">
+        <img src='/media/carousel-4.jpg' class="carousel-img">
     </div>
 
     <div class="mySlides fade">
-        <img src={img5} class="carousel-img">
+        <img src='/media/carousel-5.jpg' class="carousel-img">
     </div>
 
     <div class="mySlides fade">
-        <img src={img6} style="width:100%">
+        <img src='/media/carousel-6.jpg' style="width:100%">
     </div>
     <a class="prev"><img src={leftArr} alt="arrow pointing left"
             class="slideshow-container-arr"></a>
@@ -185,6 +180,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 } 
 
-    document.querySelector('.prev').addEventListener('click', plusSlides(-1));
-document.querySelector('.next').addEventListener('click', plusSlides(1));
+    leftArr.addEventListener('click', plusSlides(-1));
+    rightArr.addEventListener('click', plusSlides(1));
 </script>

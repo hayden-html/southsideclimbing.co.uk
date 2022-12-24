@@ -3,8 +3,6 @@ import './learn-belay.scss'
 import Frame from '../../layouts/frame.astro'
 import Accordian from '../../components/Accordian.astro'
 import Qa from '../../components/parts/Qa.astro'
-import stanage from '../../media/stanage-popular.jpg'
-import Helmet from '../../media/icons/helmet.svg'
 ---
 
 <Frame>
@@ -13,7 +11,7 @@ import Helmet from '../../media/icons/helmet.svg'
         <div class="seshpage bs">
             <h2 class="bs-title seshpage-title">Peak District</h2>
             <div class="seshpage-options">
-                <img class="seshpage-img" src={stanage}
+                <img class="seshpage-img" src="/media/stanage-popular.jpg"
                     alt="A middle-aged woman smiling whilst suspended off a rope with the sea behind her">
                 <div class="seshpage-info">
                     <div class="seshpage-info">
@@ -39,7 +37,7 @@ import Helmet from '../../media/icons/helmet.svg'
     
         <div class="included bs">
             <div class="gear">
-                <img class="gear-img" src={Helmet} alt="helmet icon">
+                <img class="gear-img" src="/media/icons/helmet.svg" alt="helmet icon">
                 <div class="gear-text">All Equipment Included</div>
             </div>
             <div class="divide"></div>

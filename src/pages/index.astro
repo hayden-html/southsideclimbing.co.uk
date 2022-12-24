@@ -6,11 +6,6 @@ import ContactForm from '../components/ContactForm.astro';
 // import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 // import CookiePopUp from '../components/CookiePopUp.astro';
 import "../styles/index.scss";
-import warmLove from '../media/warm-love.jpg'
-import belay from "../media/belay.jpg"
-import gearing from "../media/gearing-up.jpg"
-import hayden from "../media/hayden-hang.jpg"
-import haydenMob from "../media/hayden-hang-mob.jpg"
 
 ---
 <Frame title="" desc="Experience climbing with Southside Climbing. We our based in Dorset, and run climbing sessions for beginners at Portland. You can learn to climb and belay your friends and family!">
@@ -18,7 +13,7 @@ import haydenMob from "../media/hayden-hang-mob.jpg"
 			
 				<div class="hero">
 					<h2 class="bs">Experience Climbing Dorset</h2>
-					<img src={warmLove} alt="A young man climbing in the sunset with the sea behind him"
+					<img src='/media/warm-love.jpg' alt="A young man climbing in the sunset with the sea behind him"
 						class="hero-img">
 				</div>
 	
@@ -38,9 +33,9 @@ import haydenMob from "../media/hayden-hang-mob.jpg"
 							Sessions</a>
 					</div>
 					<div class="sessions-img">
-						<img src={belay} alt="Myself belaying from my harness, gripping the climbing rope"
+						<img src="/media/belay.jpg" alt="Myself belaying from my harness, gripping the climbing rope"
 							class="sessions-img-belay">
-						<img src={gearing} alt="Myself gearing up, and passing karabiners to sam"
+						<img src="/media/gearing-up.jpg" alt="Myself gearing up, and passing karabiners to sam"
 							class="sessions-img-setup">
 	
 					</div>
@@ -57,13 +52,13 @@ import haydenMob from "../media/hayden-hang-mob.jpg"
 							it challenges me physically and mentally. There's always a climb that I'm challenging myself on,
 							once I've climbed something I've worked, on I get a real sense of achievement. Climbing is for
 							everyone, I'm proud to be part of such a friendly and diverse communitity."</p>
-						<!-- <div class="hayden-extend"><img src="./media/icons/down-arr.svg" alt="down arrow" class="hayden-arr"></div> -->
+						<!-- <div class="hayden-extend"><img src=".../media/icons/down-arr.svg" alt="down arrow" class="hayden-arr"></div> -->
 						<!-- https://www.w3schools.com/howto/howto_js_read_more.asp -->
 					</div>
 					<div class="flex">
-						<img src={hayden} alt="Hayden sat in his harness, suspended next to the rock"
+						<img src="/media/hayden-hang.jpg" alt="Hayden sat in his harness, suspended next to the rock"
 							class="hayden-img">
-						<img src={haydenMob} alt="Hayden sat in his harness, suspended next to the rock"
+						<img src="/media/hayden-hang-mob.jpg" alt="Hayden sat in his harness, suspended next to the rock"
 							class="hayden-img-mob">
 						<ul class="bs-text quals">
 							<h4>Qualifications:</h4>
