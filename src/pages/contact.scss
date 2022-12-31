@@ -1,6 +1,8 @@
 // sass --watch contact.scss ./asset/css/contact.css
 
 .details {
+    font-family: 'Poppins', sans-serif;
+    
     display: block;
 
     .options {
@@ -9,8 +11,8 @@
     &-a {
         display: block;
         margin: auto 0;
-        font-size: 1.8em !important;
-        line-height: 1.8em !important;
+        font-size: 1.8em;
+        line-height: 1.8em;
 
     }
 
@@ -30,21 +32,34 @@
 }
 
 @media (max-width: 700px) {
-
+    
     .details {
         &-a {
-            font-size: 1.4em !important;
-            line-height: 1.4em !important;
+            font-size: 1.4em;
+            line-height: 1.4em;
         }
     
         .tel, .email {
             &-img {
                 margin: 0 20px 0 0;
             }
-            &-text {
-                margin: auto 0 !important;
-            }
         }
     }
 }
 
+@media (max-width: 550px) {
+    .details {
+        .options {
+            margin-left: 0px;
+        }
+        &-a {
+            font-size: 1em;
+        }
+        .tel, .email {
+            &-img {
+                width: 35px;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+}
