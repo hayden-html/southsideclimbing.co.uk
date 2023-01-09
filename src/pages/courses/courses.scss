@@ -1,6 +1,6 @@
-// sass --watch sessions.scss ./asset/css/sessions.css
+// sass --watch courses.scss ./asset/css/courses.css
 
-.session {
+.course {
     
     &-layout {
         display: flex;
@@ -76,7 +76,7 @@
 }
 
 @media (max-width: 670px) {
-    .session {
+    .course {
         &-layout {
             display: block;
         }

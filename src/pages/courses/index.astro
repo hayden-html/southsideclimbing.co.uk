@@ -1,0 +1,78 @@
+---
+import Frame from '../../layouts/frame.astro';
+import './courses.scss'
+
+
+import { Image } from '@astrojs/image/components'
+// import groups from "../media/groups.jpg"
+// const alt = "Hayden sat in his harness"
+---
+
+<Frame title={' - Courses'} description={'We run a variety of climbing courses.'}>
+
+
+        <div class="L2B bs">
+            <h3 class="bs-title">Learn to Belay</h3>
+            <div class="course-layout">
+                    <img src="/media/L2B.jpg" alt="Hayden sat in his harness, suspended next to the rock"
+                        class="L2B-img">
+                <div class="course-info">
+                    <div class="course-sub"><span class="course-sub-li">8 Hours · </span><span
+                            class="course-sub-li">2-6 Climbers · </span><span class="course-sub-li">Beginners</span>
+                    </div>
+                    <p class="course-text bs-text">These courses are ideal for beginners to roped climbing . You’ll learn how to tie knots, belay and climb.</p>
+
+                    <div class="course-buttons">
+                        <script is:inline src="https://assets.ticketinghub.com/checkout.js" data-widget="3d0b09ea-1f3a-4b3c-90de-8f7ce8ea28b1"></script>
+                        <a href="/courses/learn-to-belay/" class="course-see">See More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="peak bs">
+            <h3 class="bs-title">Peak District</h3>
+                <img src="/media/stanage-popular.jpg" alt="Hayden sat in his harness, suspended next to the rock"
+                    class="peak-img">
+            <div class="course-layout-block">
+                <div class="course-info course-info">
+                    <div class="course-sub">
+                        <span class="course-sub-li">2 Days · </span>
+                        <span class="course-sub-li">2-6 Climbers · </span>
+                        <span class="course-sub-li">Beginners</span>
+                    </div>
+                    <p class="course-text bs-text">The Peak District is the home of gritstone climbing and it’s epic scenery. We’ll climb Stanage Edge and another local crag near Hathersage.</p>
+
+                    <div class="course-buttons">
+                        <script is:inline src="https://assets.ticketinghub.com/checkout.js" data-widget="c3a9cc0d-1372-40bf-a960-8318846ee538"></script>
+                        <a href="/courses/peak-district/" class="course-see">See More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="groups bs">
+            <h3 class="bs-title">Group Bookings</h3>
+            <div class="course-layout group-layout">
+                <div class="course-info group-info">
+                    <div class="course-sub"><span
+                            class="course-sub-li">6+ Climbers · </span>
+                            <span class="course-sub-li">Corporate Teams · </span>
+                            <span class="course-sub-li">Youth Groups</span>
+                    </div>
+                    <p class="course-text bs-text">Whether you’re looking for a team building day, or a memorable experience, we have something for you.</p>
+
+                    
+                        <div class="course-buttons">
+                            <a href="/contact/" class="course-see
+                            bs-button-contact">Contact Us</a>
+                        </div>
+                </div>
+                <img src="/media/groups.jpg" alt="Hayden sat in his harness, suspended next to the rock"
+                        class="group-img">
+            </div>
+        </div>
+
+
+</Frame>
