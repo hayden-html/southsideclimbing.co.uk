@@ -1,73 +1,102 @@
 ---
-import Frame from '../layouts/frame.astro';
+import Frame from "../layouts/frame.astro";
 // import Carousel from '../components/Carousel.astro';
-import ContactForm from '../components/ContactForm.astro';
-import BootCarousel from '../components/BootCarousel.astro';
+import ContactForm from "../components/ContactForm.astro";
+import BootCarousel from "../components/BootCarousel.astro";
 // import CarouselBS from '../components/carouselBS.jsx';
 // import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 // import CookiePopUp from '../components/CookiePopUp.astro';
-import "../styles/index.scss";
-
+import "./index.scss";
 ---
-<Frame title="" desc="Experience climbing with Southside Climbing. We our based in Dorset, and run climbing courses for beginners at Portland. You can learn to climb and belay your friends and family!">
-	
-			
-				<div class="hero">
-					<div class="bs hero-text">Experience<br/>Climbing<br/>Dorset</div>
-					<img src='/media/warm-love.jpg' alt="A young man climbing in the sunset with the sea behind him"
-						class="hero-img">
-				</div>
-	
-				<p class="intro bs">At Southside Climbing we want to share the joy and adventure of climbing in the south coast. Our courses are designed for a range of abilities, from absolute beginners to more experienced climbers. <span class="intro-desk">You'll experience Dorset’s scenic views and spot some wildlife too!</span>
-				</p>
-	
-				<div class="courses bs">
-					<div class="courses-text">
-						<h3 class="bs-title">Our courses</h3>
-						<p class="bs-text">We run a variety of different courses in Dorset. Whether you are looking to try
-							something new or you want an action packed holiday, there's something for you.</p>
-						<a class="courses-butt bs-button courses-butt-desk"
-							href="./courses">See
-							Courses</a>
-					</div>
-					<div class="courses-img">
-						<img src="/media/belay.jpg" alt="Myself belaying from my harness, gripping the climbing rope"
-							class="courses-img-belay">
-						<img src="/media/gearing-up.jpg" alt="Myself gearing up, and passing karabiners to sam"
-							class="courses-img-setup">
-	
-					</div>
-					<a class="courses-butt bs-button courses-butt-mob"
-						href="./courses">See
-						Courses</a>
-				</div>
-	
-				<div class="hayden bs">
-					<h3 class="bs-title">About Me</h3>
-					<div class="hayden-textbox">
-						<p class="hayden-text bs-text">"Hello, I'm Hayden, the owner of Southside Climbing. I started climbing in 2014, from then it's become a huge part of my life. I love climbing because it challenges me physically and mentally. There's always a climb that I'm working on, and nothing beats the sense of achievement when you finally get to the top! Climbing is a friendly and diverse sport, with a growing community I’m proud to be a part of.”</p>
 
-					</div>
-					<div class="flex">
-						<img src="/media/hayden-hang.jpg" alt="Hayden sat in his harness, suspended next to the rock"
-							class="hayden-img">
-						<img src="/media/hayden-hang-mob.jpg" alt="Hayden sat in his harness, suspended next to the rock"
-							class="hayden-img-mob">
-						<ul class="bs-text quals">
-							<h4>Qualifications:</h4>
-							<li>Rock Climbing Instructor</li>
-							<li>Climbing Wall Instructor</li>
-							<li>Foundation Coach</li>
-							<li>First Aid in the Outdoors</li>
-							<li>Safeguarding in Sport</li>
-	
-						</ul>
-					</div>
-				</div>
-	
-				<!-- <Carousel /> -->
-				<BootCarousel />
-				<ContactForm />
-			
+<Frame
+  title=""
+  desc="Experience climbing with Southside Climbing. We our based in Dorset, and run climbing courses for beginners at Portland. You can learn to climb and belay your friends and family!"
+>
+
+	<a class="promo w-100" href="/courses/learn-to-belay/">Book on for Feburary half-term!</a>
+
+  <div class="hero">
+    <div class="bs hero-text">Experience<br />Climbing<br />Dorset</div>
+    <img
+      src="/media/warm-love.jpg"
+      alt="A young man climbing in the sunset with the sea behind him"
+      class="hero-img"
+    />
+  </div>
+
+  <p class="intro bs">
+    At Southside Climbing we want to share the joy and adventure of climbing in
+    the south coast. Our courses are designed for a range of abilities, from
+    absolute beginners to more experienced climbers. <span class="intro-desk"
+      >You'll experience Dorset’s scenic views and spot some wildlife too!</span
+    >
+  </p>
+
+  <div class="courses bs">
+    <div class="courses-text">
+      <h3 class="bs-title">Our courses</h3>
+      <p class="bs-text">
+        We run a variety of different courses in Dorset. Whether you are looking
+        to try something new or you want an action packed holiday, there's
+        something for you.
+      </p>
+      <a class="courses-butt bs-button courses-butt-desk" href="./courses"
+        >See Courses</a
+      >
+    </div>
+    <div class="courses-img">
+      <img
+        src="/media/belay.jpg"
+        alt="Myself belaying from my harness, gripping the climbing rope"
+        class="courses-img-belay"
+      />
+      <img
+        src="/media/gearing-up.jpg"
+        alt="Myself gearing up, and passing karabiners to sam"
+        class="courses-img-setup"
+      />
+    </div>
+    <a class="courses-butt bs-button courses-butt-mob" href="./courses"
+      >See Courses</a
+    >
+  </div>
+
+  <div class="hayden bs">
+    <h3 class="bs-title">About Me</h3>
+    <div class="hayden-textbox">
+      <p class="hayden-text bs-text">
+        "Hello, I'm Hayden, the owner of Southside Climbing. I started climbing
+        in 2014, from then it's become a huge part of my life. I love climbing
+        because it challenges me physically and mentally. There's always a climb
+        that I'm working on, and nothing beats the sense of achievement when you
+        finally get to the top! Climbing is a friendly and diverse sport, with a
+        growing community I’m proud to be a part of.”
+      </p>
+    </div>
+    <div class="flex">
+      <img
+        src="/media/hayden-hang.jpg"
+        alt="Hayden sat in his harness, suspended next to the rock"
+        class="hayden-img"
+      />
+      <img
+        src="/media/hayden-hang-mob.jpg"
+        alt="Hayden sat in his harness, suspended next to the rock"
+        class="hayden-img-mob"
+      />
+      <ul class="bs-text quals">
+        <h4>Qualifications:</h4>
+        <li>Rock Climbing Instructor</li>
+        <li>Climbing Wall Instructor</li>
+        <li>Foundation Coach</li>
+        <li>First Aid in the Outdoors</li>
+        <li>Safeguarding in Sport</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- <Carousel /> -->
+  <BootCarousel />
+  <ContactForm />
 </Frame>
-
