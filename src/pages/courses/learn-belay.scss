@@ -17,10 +17,6 @@
 
 .seshpage {
 
-    &-title {
-        font-size: 5em;
-    }
-
     &-img {
         margin-top: 5px;
         display: block;
@@ -33,12 +29,10 @@
         font-weight: 500;
         font-size: 2em;
         color: rgb(50, 50, 50);
-        // margin: 0 0 5px 0;
     }
 
     &-desc {
         display: inline-block;
-        font-family: 'Poppins', sans-serif;
         font-weight: 600;
         font-size: 1.4em;
         color: rgb(60, 60, 60);

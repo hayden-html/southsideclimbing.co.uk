@@ -1,20 +1,21 @@
 ---
+import { Image, Picture } from "@astrojs/image/components";
+
 import Frame from "../layouts/frame.astro";
-// import Carousel from '../components/Carousel.astro';
 import ContactForm from "../components/ContactForm.astro";
-import BootCarousel from "../components/BootCarousel.astro";
-// import CarouselBS from '../components/carouselBS.jsx';
+import InstaWidget from "../components/InstaWidget.astro";
 // import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 // import CookiePopUp from '../components/CookiePopUp.astro';
-import "./index.scss";
+import "../styles/index.scss";
 ---
 
 <Frame
   title=""
   desc="Experience climbing with Southside Climbing. We our based in Dorset, and run climbing courses for beginners at Portland. You can learn to climb and belay your friends and family!"
 >
-
-	<a class="promo w-100" href="/courses/learn-to-belay/">Book on for Feburary half-term!</a>
+  <a class="promo" href="/courses/learn-to-belay/"
+    >Book on for Feburary half-term!</a
+  >
 
   <div class="hero">
     <div class="bs hero-text">Experience<br />Climbing<br />Dorset</div>
@@ -33,70 +34,57 @@ import "./index.scss";
     >
   </p>
 
-  <div class="courses bs">
+  <div class="courses bs section">
     <div class="courses-text">
-      <h3 class="bs-title">Our courses</h3>
+      <h1 class="section-title">Our courses</h1>
       <p class="bs-text">
         We run a variety of different courses in Dorset. Whether you are looking
         to try something new or you want an action packed holiday, there's
         something for you.
       </p>
-      <a class="courses-butt bs-button courses-butt-desk" href="./courses"
-        >See Courses</a
-      >
+      <a class="btn section-btn-desk" href="./courses">See Courses</a>
     </div>
-    <div class="courses-img">
+    <div class="section-img">
       <img
         src="/media/belay.jpg"
         alt="Myself belaying from my harness, gripping the climbing rope"
-        class="courses-img-belay"
+        class="courses-img-desk"
       />
       <img
         src="/media/gearing-up.jpg"
         alt="Myself gearing up, and passing karabiners to sam"
-        class="courses-img-setup"
+        class="courses-img-mob"
       />
     </div>
-    <a class="courses-butt bs-button courses-butt-mob" href="./courses"
-      >See Courses</a
-    >
+    <a class="btn section-btn-mob" href="./courses">See Courses</a>
   </div>
 
-  <div class="hayden bs">
-    <h3 class="bs-title">About Me</h3>
-    <div class="hayden-textbox">
-      <p class="hayden-text bs-text">
-        "Hello, I'm Hayden, the owner of Southside Climbing. I started climbing
-        in 2014, from then it's become a huge part of my life. I love climbing
-        because it challenges me physically and mentally. There's always a climb
-        that I'm working on, and nothing beats the sense of achievement when you
-        finally get to the top! Climbing is a friendly and diverse sport, with a
-        growing community I’m proud to be a part of.”
+  <div class="about bs section">
+    <div class="section-img">
+      <img
+        srcset="/media/about.jpg"
+        alt="Hayden sat in his harness, suspended next to the rock"
+        class="about-img"
+      />
+    </div>
+    <div class="about-textbox">
+      <h1 class="about-title">About Us</h1>
+      <img
+        srcset="/media/about-mob.jpg"
+        alt="Hayden sat in his harness, suspended next to the rock"
+        class="about-img-mob"
+      />
+      <p class="bs-text">
+        Meet Hayden, the instructor of Southside Climbing. He has been climbing
+        since 2014, since then he's been developing himself in the world of
+        climbing.
       </p>
-    </div>
-    <div class="flex">
-      <img
-        src="/media/hayden-hang.jpg"
-        alt="Hayden sat in his harness, suspended next to the rock"
-        class="hayden-img"
-      />
-      <img
-        src="/media/hayden-hang-mob.jpg"
-        alt="Hayden sat in his harness, suspended next to the rock"
-        class="hayden-img-mob"
-      />
-      <ul class="bs-text quals">
-        <h4>Qualifications:</h4>
-        <li>Rock Climbing Instructor</li>
-        <li>Climbing Wall Instructor</li>
-        <li>Foundation Coach</li>
-        <li>First Aid in the Outdoors</li>
-        <li>Safeguarding in Sport</li>
-      </ul>
+
+      <a class="btn bs-btn section-btn" href="./about">See More</a>
     </div>
   </div>
 
-  <!-- <Carousel /> -->
-  <BootCarousel />
+  <InstaWidget/>
+
   <ContactForm />
 </Frame>

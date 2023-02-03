@@ -1,0 +1,293 @@
+// sass --watch index.scss ./asset/css/index.css
+
+main {
+    .promo {
+        font-family: 'Poppins', sans-serif;
+        width: 100%;
+        display: block;
+        font-size: 1.9em;
+        font-weight: 600;
+        color: #2c2c2c;
+        text-align: center;
+        text-decoration: none;
+        background-color: #ffa07b;
+        padding: 10px 0;
+        margin-top: -20px;
+        &:hover {
+            color: var(--bs-link-hover-color);
+        }
+        @media(max-width: 585px){
+            font-size: 1.5em;
+        }
+    }
+
+    .hero {
+        display: flex;
+        width: max-content;
+
+        margin: 20px auto;
+        overflow: visible;
+
+        .hero-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.4em;
+            font-style: normal;
+            font-size: 3.8em;
+            color: #0A96DE;
+            // max-width: 350px;
+            padding: 50px 30px 50px 20px;
+            margin: auto 0px auto 0px;
+            word-spacing: 100vw;
+        }
+    }
+
+    .intro {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.8em;
+        color: #484848;
+        text-align: center;
+        max-width: 820px;
+        background-color: white;
+        padding: 10px 20px 15px !important;
+
+    }
+
+    .section {
+        display: flex;
+        &-title {
+            text-decoration: none;
+        }
+
+        &-img {
+            margin: 25px 30px;
+        }
+
+        p {
+            width: 90%;
+            margin: 0 10px 10px;
+        }
+        &-text {
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+        }
+        &-btn {
+            margin-top: auto;
+            &-mob {
+                display: none;
+            }
+        }
+    }
+    
+
+    .courses {
+
+        &-mob {
+            display: none;
+        }
+
+        &-img-mob {
+            display: none;
+        }
+
+    }
+
+    .about {
+
+        &-img-mob {
+            display: none;
+        }
+    }
+
+    .btn {
+        &-mob {
+            display: none;
+        }
+    }
+
+}
+
+@media (max-width: 1000px) {
+    main {
+        .hero {
+            width: 100%;
+            margin: 0;
+            flex-wrap: wrap;
+            
+            .hero-text {
+                order: 2;
+                margin: auto 0;
+                font-size: 3em;
+                width: 100%;
+                display: none;
+            }
+            
+            &-img {
+                width: 100%;
+                display: block;
+                order: 1;
+                margin: 0 auto 15px;
+                max-width: 600px;
+            }
+        }
+
+        .intro {
+            width: 85%;
+            font-size: 22px;
+            &-desk {
+                display: none;
+            }
+        }
+    }
+
+}
+@media (max-width: 800px) {
+
+    main {
+
+        .hero {
+            width: 100%;
+            margin: 0;
+            flex-wrap: wrap;
+            
+            .hero-text {
+                order: 2;
+                margin: auto 0;
+                font-size: 3em;
+                width: 100%;
+                display: none;
+            }
+            
+            &-img {
+                width: 100%;
+                display: block;
+                order: 1;
+                margin: 0 auto 15px;
+                max-width: 600px;
+            }
+        }
+
+        .intro {
+            width: 85%;
+            font-size: 22px;
+            &-desk {
+                display: none;
+            }
+        }
+
+        .courses {
+            display: block;
+            &-img {
+                &-desk {
+                    display: none;
+                }
+                &-mob{
+                    display: block;
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .section {
+
+            p {
+                margin: 0 10px 5px;
+            }
+
+            &-img {
+                margin: 10px auto;
+            }
+
+            &-btn {
+                &-desk {
+                    display: none;
+                }
+                
+                &-mob {
+                    margin: 0 5% 5px;
+                    display: block;
+                }
+            }
+        }
+
+        .about {
+            margin-top: 10px;
+            
+            &-img {
+                display: none;
+            }
+            
+            &-img-mob {
+                display: block;
+                margin: 0 auto 10px;
+            }
+
+            .quals {
+                padding-top: 10px;
+            }
+
+            li {
+                margin: 10px 0 10px 15px;
+            }
+            
+        }
+    }
+}
+
+    @media (max-width: 670px) {
+       main {
+        .about {
+
+            .flex {
+                display: block;
+            }
+        }
+        } 
+    
+    }
+
+
+@media (max-width: 480px) {
+
+    main {
+        
+        .intro {
+            font-size: 18px;
+            &-desk {
+                display: none;
+            }
+        }
+        
+        .courses {
+            p {
+                width: 100%;
+                margin: 5px 5px;
+            }
+            &-img {
+                width: 100%;
+                margin: 0;
+                &-belay {
+                    width: 150px;
+                }
+                
+            }
+            
+            &-butt {
+                margin: 10px;
+            }
+        }
+
+        .hayden {
+
+            &-textbox {
+                position: relative;
+            }
+        }
+        
+        
+    }
+}

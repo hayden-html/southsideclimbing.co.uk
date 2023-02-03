@@ -1,0 +1,74 @@
+---
+import Frame from "../layouts/frame.astro";
+import "../styles/about.scss";
+
+// import {Image} from '@astrojs/image/components';
+// import haydenProj from '../images/hayden-proj.jpg'
+---
+
+<Frame
+  title="- About"
+  desc="Southside Climbing is based in Dorset. Meet Hayden, Our Instructor. Hayden had been climbing since 2014."
+>
+  <div class="bs section story">
+    <div class="section-text">
+      <h1>About Us</h1>
+      <img
+        src="/media/hayden-blacknor-mob.jpg"
+        alt="Hayden, in shorts and a maroon t-shirt. He stopped to look behind him whilst walking past a boulder"
+        class="section-mob-img story-img-mob"
+      />
+      <p>
+        Southside Climbing is based in Dorset, which is the home to Swanage and
+        the Isle of Portland. We offer sessions to beginners for outdoor roped
+        climbing.
+      </p>
+    </div>
+    <img
+      src="/media/hayden-blacknor.jpg"
+      alt="Hayden, in shorts and a maroon t-shirt. He stopped to look behind him whilst walking past a boulder"
+      class="section-img story-img"
+    />
+  </div>
+
+  <div class="bs hayden">
+    <div class="section">
+      <img
+        src="/media/hayden-proj.jpg"
+        alt="Hayden is climbing an overhanging wall indoors."
+        class="section-img hayden-img"
+      />
+      <div class="section-text">
+        <h1>Meet Hayden</h1>
+        <img
+          src="/media/hayden-proj-mob.jpg"
+          alt="Hayden is climbing an overhanging wall indoors."
+          class="section-mob-img hayden-img-mob"
+        />
+        <p>
+          Hayden is our Instructor who has been instructing climbing for over
+          the last 5 years. He discovered climbing through his local climbing
+          centre when he was 15. Since then he has climbed all over the country
+          and has gained multiple climbing qualifications.
+        </p>
+      </div>
+    </div>
+
+    <div class="hayden-quals">
+      <h3>Hayden's Qualifications</h3>
+      <div class="hayden-quals-list">
+        <ul>
+          <li>Rock Climbing Instructor</li>
+          <li>Climbing Wall Instructor</li>
+          <li>Foundation Coach</li>
+        </ul>
+        <ul>
+          <li>RSD Roped Route-Setter</li>
+          <li>Outdoor First Aid - 16 Hours</li>
+          <li>Safegaurding in Sport</li>
+        </ul>
+      </div>
+      <p>+ Insurance</p>
+    </div>
+  </div>
+</Frame>
