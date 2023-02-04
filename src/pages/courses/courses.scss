@@ -103,3 +103,11 @@
         }
     }
 }
+
+@media (max-width: 366px) {
+    .course {
+        &-see {
+                margin-top: 10px;
+        }
+    }
+}
