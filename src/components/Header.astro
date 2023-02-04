@@ -35,15 +35,15 @@
   </div>
 </nav>
 
-<script>
+<script lang="js">
   function openMenu(){
 		const mobMenu = document.querySelector('.mob-menu');
 		// console.log('open')
-		mobMenu?.classList.remove('none');
+		mobMenu.classList.remove('none');
 	}
 	
-	document.getElementById('burger')?.addEventListener('click', openMenu);
-	document.getElementById('close')?.addEventListener('click', closeMenu);
+	document.getElementById('burger').addEventListener('click', openMenu);
+	document.getElementById('close').addEventListener('click', closeMenu);
 
 function closeMenu(){
     // console.log('closed')
@@ -187,6 +187,7 @@ function closeMenu(){
 
 
     nav {
+      padding: 8px 10px;
         .title {
             .logo {
                 width: 40px;
