@@ -1,6 +1,7 @@
 ---
 import Frame from '../layouts/frame.astro';
 import "../styles/contact.scss";
+import "../styles/global.scss";
 
 import ContactForm from '../components/ContactForm.astro';
 ---
@@ -8,7 +9,7 @@ import ContactForm from '../components/ContactForm.astro';
 <Frame title={' - Contact'} description={'Please get in touch if you wish to enquire'}>
     <ContactForm />
     <div class="details bs">
-        <div>Our Details</div>
+        <h1>Our Details</h1>
         <div class="options">
             <div class="tel"><img src="/media/icons/whatsapp.svg" class="tel-img" alt="whatsapp"><a href="tel:+447767048893" class="details-a tel-text ">+44 7707 162505</a></div>
             <div class="email"><img src="/media/icons/email.svg" alt="email" class="email-img"><a href="mailto:hayden@southsideclimbing.co.uk" class="details-a email-text">hayden@southsideclimbing.co.uk</a></div>

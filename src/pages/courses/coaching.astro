@@ -1,0 +1,42 @@
+---
+import './learn-belay.scss'
+import Frame from '../../layouts/frame.astro'
+import Accordian from '../../components/Accordian.astro'
+import Qa from '../../components/parts/Qa.astro'
+---
+
+<Frame title={' - London Coaching'} description={"Coaching is now available at Vauxwall East. Hayden has been coaching climbing for 5 years and is a qualified coach. If you're looking to learn technique or push your grade, he’d love to help."}>
+
+        <div class="seshpage bs">
+            <h1 class="seshpage-title">Private Coaching - London</h1>
+            <div class="seshpage-options">
+                <div class="img-li">
+                    <img class="seshpage-img square-img" src="/media/coaching.jpg" alt="Hayden is climbing on an overhanging bouldering wall, using just his finger tips on the small crimps.">
+                    <ul>
+                        <li>Technique & Physical Training</li>
+                        <li>Long & Short Term Coaching</li>
+                        <li>Weekly Remote Support</li>
+                        <li>A Wide Range of Resources</li>
+                    </ul>
+                </div>
+                <div class="seshpage-info flex">
+
+                    <p class="private-text bs-text">We are now offering private coaching sessions at Vauxwall West. These sessions aimed towards beginner & intermediate climbers below the V6 grade.<br>
+                        You’ll be coached around your style of climbing, the adjustments made should feel natural and efficient. Coaching is a journey, we are looking to get climbers to their goals, so if your looking for continued support or direction, this is a great opportunity.
+                        <br>If you have a climbing partner, we recommend 2:1 coaching and having booking 2 sessions back to back. </p>
+                    <strong class="bs-text">You’ll need to bring your own equipment and pay for your entry.</strong>
+                </div>
+                <div class="seshpage-buttons">
+                    <script is:inline src="https://assets.ticketinghub.com/checkout.js" data-widget="158f5c03-eb1b-4fb5-9542-c620dcc77410"></script>
+                </div>
+        </div>
+        </div>
+        
+        <Accordian>
+            <Qa question="Where will I meet my coach?" ans="Hayden will be at reception at the start of your session. If you haven't been to a London Climbing Centre wall yet, please fill out the waiver online to save time."/>
+            <Qa question="Can I be coached at other centres?" ans="Yes, please get in touch as we may be able to coach at your local centre."/>
+            <Qa question="Other Queries?" ans="Please send us your queries, send an email to hayden@southsideclimbing.co.uk, or fill out the form on our contact page."/>
+        </Accordian>
+    
+
+</Frame>

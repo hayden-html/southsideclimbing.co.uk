@@ -88,6 +88,10 @@ main {
     }
 }
 
+br {
+    margin-bottom: 5px;
+}
+
 .horiz {
     border-color: #bdbdbd;
     border-radius: 5px;
@@ -180,7 +184,7 @@ main {
 
             .bs {
                 &-text {
-                    font-size: 1.1em;
+                    font-size: 1.2em;
                 }
             }
         }

@@ -25,7 +25,6 @@
     }
 
     &-sub {
-        font-family: 'Poppins', sans-serif;
         font-weight: 500;
         font-size: 2em;
         color: rgb(50, 50, 50);
@@ -47,6 +46,38 @@
         display: block;
         margin-bottom: 8px;
     }
+
+    // just for coaching
+
+    .square-img {
+        width: 350px;
+        @media(max-width: 800px) {
+            margin: 0 auto;
+        }
+    }
+
+    .img-li {
+        display: flex;
+        ul {
+            margin: auto 0;
+        }
+        li {
+            font-size: 1.3em;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+
+        @media(max-width: 800px) {
+            display: block;
+            margin-bottom: 10px;
+            ul {
+                display: none;
+            }
+        }
+    }
+
+
+
 }
 
 .included {
@@ -68,7 +99,6 @@
         &-text {
             display: block;
             width: fit-content;
-            font-family: 'Poppins', sans-serif;
             font-size: 1.4em;
             margin: 10px auto;
             text-align: center;
@@ -80,26 +110,24 @@
         padding: 20px;
 
         &-title {
-            font-family: 'Poppins', sans-serif;
             font-size: 1.5em;
         }
 
         li {
-            font-family: 'Poppins', sans-serif;
             font-size: 1.2em;
             margin-bottom: 5px;
         }
 
-        .divide {
-            // border-color: #bdbdbd;
-            background-color: #bdbdbd;
-            border-radius: 5px;
-            width: 2px;
-            // height: 100%;
-            display: block;
-            margin: 10px 5px;
+    }
+    .divide {
+        // border-color: #bdbdbd;
+        background-color: #bdbdbd;
+        border-radius: 5px;
+        width: 2px;
+        // height: 100%;
+        display: block;
+        margin: 10px 5px;
 
-        }
     }
 }
 
