@@ -4,6 +4,7 @@ import "../styles/contact.scss";
 import "../styles/global.scss";
 
 import ContactForm from '../components/ContactForm.astro';
+import InstaWidget from '../components/InstaWidget.astro';
 ---
 
 <Frame title={' - Contact'} description={'Please get in touch if you wish to enquire'}>
@@ -14,6 +15,6 @@ import ContactForm from '../components/ContactForm.astro';
             <div class="tel"><img src="/media/icons/whatsapp.svg" class="tel-img" alt="whatsapp"><a href="tel:+447767048893" class="details-a tel-text ">+44 7707 162505</a></div>
             <div class="email"><img src="/media/icons/email.svg" alt="email" class="email-img"><a href="mailto:hayden@southsideclimbing.co.uk" class="details-a email-text">hayden@southsideclimbing.co.uk</a></div>
         </div>
-
     </div>
+    <InstaWidget/>
 </Frame>

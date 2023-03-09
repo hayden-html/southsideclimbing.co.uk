@@ -4,13 +4,12 @@ const { question, ans } = Astro.props
 
 export interface Props {
   question: string;
-  ans: string;
 }
 ---
 
 <div class="question" id="question"><p>{question}</p><img class="question-arr" src="/media/icons/down-arr.svg"> </div>
 <div class="answer">
-  <p>{ans}</p>
+  <p><slot/></p>
 </div>
 
 
@@ -25,7 +24,7 @@ export interface Props {
         outline: none;
         transition: 0.4s;
         font-weight: 500;
-        font-size: 1.4em;
+        font-size: 18px;
         align-content: center;
         display: flex;
         justify-content: space-between;
@@ -70,11 +69,21 @@ export interface Props {
         overflow: hidden;
         transition: max-height 0.2s ease-out;
         font-weight: 400;
-        font-size: 1.2em;
+        font-size: 16px;
         color: #343434;
 
         p {
             padding: 10px 0;
+        }
+    }
+
+    @media(max-width: 780px){
+        .question {
+            font-size: 15px;
+        }
+
+        .answer {
+            font-size: 14px;
         }
     }
 

@@ -1,11 +1,33 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
- * {
+@font-face {
+    font-family: 'Nunito';
+    font-weight: 700;
+    src: url('/fonts/nunito-variablefont_wght-webfont.woff2') format('woff2'),
+        url('/fonts/nunito-variablefont_wght-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-weight: 500;
+    src: url('/fonts/notosans-medium-webfont.woff2') format('woff2'),
+        url('/fonts/notosans-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    src: url('/fonts/roboto-regular-webfont.woff2') format('woff2'),
+        url('/fonts/roboto-regular-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'Varela Round';
+    font-weight: 400;
+    src: url('/fonts/varelaround-regular-webfont.woff2') format('woff2'),
+        url('/fonts/varelaround-regular-webfont.woff') format('woff');
+}
+
+* {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     }
 
 .none {
@@ -16,18 +38,40 @@
     display: none;
 }
 
-h1 {
-    font-size: 3rem;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto-Sans', sans-serif;
+    font-size: 45px;
     font-weight: 500;
+    margin: 5px 0 8px;
     color: #19A3DE;
+
+    @media (max-width: 780px) {
+        font-size: 40px;
+    }
+
 }
+
+p {
+    font-size: 1.5em;
+    line-height: 1.25em;
+    padding-right: 20px;
+    margin-bottom: 5px;
+    color: #2e2e2e;
+}
+
+// .sub {
+//     display: inline-block;
+//     font-weight: 600;
+//     font-size: 1.4em;
+//     color: rgb(52, 52, 52);
+// }
 
 button, .btn {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 22px;
     font-weight: 500;
     text-decoration: none;
     text-align: center;
@@ -35,7 +79,13 @@ button, .btn {
     background-color: #33a0e9;
     width: max-content;
     display: block;
-    padding: 14px 20px;
+    padding: 10px 18px 12px;
+    margin-top: 5px;
+    &:active, &:focus, &:focus-visible {
+    outline-color: transparent;
+    background-color: #1b8cd7;
+    transition: .1s;
+    }
 }
 
 main {
@@ -49,38 +99,29 @@ main {
         margin: 0px auto 20px;
         max-width: 720px;
         padding: 5px 20px 15px;
-
-
-        &-text {
-            font-size: 1.5em;
-            line-height: 1.4em;
-            color: rgb(30, 30, 30);
-            margin-bottom: 5px;
-        }
     }
 
     .section {
         display: flex;
+
+        :first-child{
+            margin-right: 15px;
+        }
+
         &-title {
             text-decoration: none;
         }
 
         &-img {
-            margin: 25px 30px;
+            margin: 10px;
         }
 
-        p {
-            font-size: 1.5em;
-            width: 90%;
-            margin: 0 10px 10px;
-        }
+        
         &-text {
             display: flex;
             flex-direction: column;
-            height: fit-content;
         }
         &-btn {
-            margin-top: auto;
             &-mob {
                 display: none;
             }

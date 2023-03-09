@@ -54,33 +54,34 @@
 
 }
 
-.L2B {
-    &-img {
-        max-width: 370px;
-        width: 100%;
-        height: auto;
+// .L2B {
+//     &-img {
+//         max-width: 370px;
+//         width: 100%;
+//         height: auto;
 
-    }
-}
+//     }
+// }
 
 
-.taster {
-    &-img {
+.bs {
+    img {
         width: 300px;
 
     }
 }
+
 .peak {
     &-img {
-        width: 100%;
+        width: 100% !important;
     }
 }
 
-.group {
-    &-img {
-        width: 170%;
-    }
-}
+// .group {
+//     &-img {
+//         width: 170%;
+//     }
+// }
 
 @media (max-width: 800px) {
     .course {
