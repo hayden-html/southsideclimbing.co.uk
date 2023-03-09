@@ -217,6 +217,11 @@ br {
         }
 
         main {
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 35px;
+}
+
             .section {
                 p {
                     font-size: 1.2em;
@@ -236,7 +241,6 @@ br {
     main {
 
         h1 {
-            font-size: 2em;
             font-weight: 500;
             color: #19A3DE;
         }
