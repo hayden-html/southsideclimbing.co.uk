@@ -1,12 +1,13 @@
 ---
-
-
 import Frame from "../layouts/frame.astro";
 import ContactForm from "../components/ContactForm.astro";
 import InstaWidget from "../components/InstaWidget.astro";
 // import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 // import CookiePopUp from '../components/CookiePopUp.astro';
 import "../styles/index.scss";
+
+import {Image} from '@astrojs/image/components';
+import dancing from '../images/dancing.jpg';
 ---
 
 <Frame
@@ -16,11 +17,13 @@ import "../styles/index.scss";
 
   <div class="hero">
     <div class="hero-text card">Experience<br />Climbing<br />Dorset</div>
-    <img
-      src="/media/dancing.JPG"
+    <!-- <img
+      src={dancing}
       alt="A young man climbing in the sunset with the sea behind him"
       class="hero-img"
-    />
+    /> -->
+        <Image src={dancing} width={900} height={505.990} format="webp" alt="A young man climbing in the sunset with the sea behind him" class="hero-img"/>
+
   </div>
 
   <div class="card" id="courses">
