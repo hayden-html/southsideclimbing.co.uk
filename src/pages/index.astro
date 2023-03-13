@@ -15,7 +15,7 @@ import "../styles/index.scss";
 >
 
   <div class="hero">
-    <div class="bs hero-text">Experience<br />Climbing<br />Dorset</div>
+    <div class="hero-text card">Experience<br />Climbing<br />Dorset</div>
     <img
       src="/media/dancing.JPG"
       alt="A young man climbing in the sunset with the sea behind him"
@@ -23,51 +23,47 @@ import "../styles/index.scss";
     />
   </div>
 
-  <div class="courses bs section">
-    <div class="courses-text">
-      <h2 class="section-title">Our courses</h2>
-      <img
-        src="/media/gearing-up.jpg"
-        alt="Myself gearing up, and passing karabiners to sam"
-        class="courses-img-mob"
-      />
-      <p class="courses-text">
-        We host a range of courses at Swanage and Portland. The sessions are ideal for beginners that wants to learn rope climbing, but also for the adventure seekers.
-      </p>
-      <a class="btn section-btn-desk" href="./courses">See Courses</a>
-      <a class="btn section-btn-mob" href="./courses">See Courses</a>
-    </div>
-    <div class="section-img courses-img">
-      <img
-        src="/media/belay.jpg"
-        alt="Myself belaying from my harness, gripping the climbing rope"
-        class="courses-img-desk"
-      />
-      
+  <div class="card" id="courses">
+    <div class="section">
+    <div class="info">
+      <h2>Our courses</h2>
+        <img
+          src="/media/gearing-up.jpg"
+          alt="Myself gearing up, and passing karabiners to sam"
+          class="img-mob"
+        />
+        <p>
+          We host a range of courses at Swanage and Portland. The sessions are ideal for beginners that wants to learn rope climbing, but also for the adventure seekers.
+        </p>
+        <a class="btn section-btn" href="./courses">See Courses</a>
+      </div>
+        <img
+          src="/media/belay.jpg"
+          alt="Myself belaying from my harness, gripping the climbing rope"
+          class="img-desk"
+        />
     </div>
   </div>
 
-  <div class="about bs section">
-    <div class="section-img">
-      <img
-        srcset="/media/about.jpg"
-        alt="Hayden sat in his harness, suspended next to the rock"
-        class="about-img"
-      />
-    </div>
-    <div class="about-textbox">
-      <h2 class="section-title">About Us</h2>
-      <img
-        srcset="/media/about-mob.jpg"
-        alt="Hayden sat in his harness, suspended next to the rock"
-        class="about-img-mob"
-      />
-      <p class="about-text">
-        Hayden started Southside Climbing as he wanted to share his passion with new climbers. We aim to deliver fun and exciting sessions as you start your climbing journey.
-      </p>
-
-      <a class="btn" href="./about">See More</a>
-    </div>
+  <div class="card" id="about">
+      <div class="section">
+        <img
+          srcset="/media/about.jpg"
+          alt="Hayden sat in his harness, suspended next to the rock"
+          class="img-desk"/>
+            <div class="info">
+        <h2>About Us</h2>
+        <img
+          srcset="/media/about-mob.jpg"
+          alt="Hayden sat in his harness, suspended next to the rock"
+          class="img-mob"
+        />
+        <p>
+          Hayden started Southside Climbing as he wanted to share his passion with new climbers. We aim to deliver fun and exciting sessions as you start your climbing journey.
+        </p>
+        <a class="btn" href="./about">See More</a>
+            </div>
+      </div>
   </div>
 
   <InstaWidget/>

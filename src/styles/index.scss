@@ -28,6 +28,7 @@ main {
         overflow: visible;
 
         &-text {
+            font-family: 'Noto-Sans', sans-serif;
             font-weight: 600;
             line-height: 1.4em;
             font-style: normal;
@@ -44,30 +45,30 @@ main {
     }
     
 
-    .courses {
+    // .courses {
 
-        &-mob {
-            display: none;
-        }
+    //     &-mob {
+    //         display: none;
+    //     }
 
-        &-img-mob {
-            display: none;
-        }
+    //     &-img-mob {
+    //         display: none;
+    //     }
 
-    }
+    // }
 
-    .about {
+    // .about {
 
-        &-img-mob {
-            display: none;
-        }
-    }
+    //     &-img-mob {
+    //         display: none;
+    //     }
+    // }
 
-    .btn {
-        &-mob {
-            display: none;
-        }
-    }
+    // .btn {
+    //     &-mob {
+    //         display: none;
+    //     }
+    // }
 
 }
 
@@ -87,7 +88,7 @@ main {
                 order: 2;
                 margin: auto 0;
                 font-size: 3em;
-                width: 100%;
+                // width: 100%;
                 display: none;
             }
             
@@ -123,64 +124,70 @@ main {
             }
         }
 
-
-        .courses {
-            &-img {
-                &-desk {
-                    display: none;
-                }
-                &-mob{
-                    display: block;
-                    width: 98%;
-                    margin: 0 auto 5px;
-                }
+        #about {
+            .img-mob {
+                width: 270px;
             }
         }
 
-        .section {
 
-            p {
-                font-size: 1.4em;
-                margin: 0 10px 5px;
-            }
+    //     .courses {
+    //         &-img {
+    //             &-desk {
+    //                 display: none;
+    //             }
+    //             &-mob{
+    //                 display: block;
+    //                 width: 98%;
+    //                 margin: 0 auto 5px;
+    //             }
+    //         }
+    //     }
 
-            &-img {
-                margin: 10px auto;
-            }
+    //     .section {
 
-            &-btn {
-                &-desk {
-                    display: none;
-                }
+    //         p {
+    //             font-size: 1.4em;
+    //             margin: 0 10px 5px;
+    //         }
+
+    //         &-img {
+    //             margin: 10px auto;
+    //         }
+
+    //         &-btn {
+    //             &-desk {
+    //                 display: none;
+    //             }
                 
-                &-mob {
-                    margin: 0 5px 5px;
-                    display: block;
-                }
-            }
-        }
+    //             &-mob {
+    //                 margin: 0 5px 5px;
+    //                 display: block;
+    //             }
+    //         }
+    //     }
 
-        .about {
-            margin-top: 10px;
+    //     .about {
+    //         margin-top: 10px;
             
-            &-img {
-                display: none;
-            }
+    //         &-img {
+    //             display: none;
+    //         }
             
-            &-img-mob {
-                display: block;
-                margin: 0 auto 10px;
-            }
+    //         &-img-mob {
+    //             display: block;
+    //             margin: 0 auto 10px;
+    //         }
 
-            .quals {
-                padding-top: 10px;
-            }
+    //         .quals {
+    //             padding-top: 10px;
+    //         }
 
-            li {
-                margin: 10px 0 10px 15px;
-            }
+    //         li {
+    //             margin: 10px 0 10px 15px;
+    //         }
             
-        }
+    //     }
     }
 }
 
@@ -198,41 +205,38 @@ main {
     @media (max-width: 600px) {
         main {
             padding: 0 !important;
+            .hero-img {
+                margin-top: 8px;
+                width: 85%;
+            }
         }
     }
 
 
-@media (max-width: 480px) {
+// @media (max-width: 480px) {
 
-    main {
+//     main {
 
         
-        .courses {
-            p {
-                width: 100%;
-                margin: 5px 5px;
-            }
-            &-img {
-                // width: 100%;
-                margin: 0;
-                &-belay {
-                    width: 150px;
-                }
+//         .courses {
+//             p {
+//                 width: 100%;
+//                 margin: 5px 5px;
+//             }
+//             &-img {
+//                 // width: 100%;
+//                 margin: 0;
+//                 &-belay {
+//                     width: 150px;
+//                 }
                 
-            }
+//             }
             
-            &-butt {
-                margin: 10px;
-            }
-        }
-
-        .hayden {
-
-            &-textbox {
-                position: relative;
-            }
-        }
+//             &-butt {
+//                 margin: 10px;
+//             }
+//         }
         
         
-    }
-}
+//     }
+// }
