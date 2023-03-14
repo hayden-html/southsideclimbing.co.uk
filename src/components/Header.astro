@@ -45,11 +45,15 @@
 	document.getElementById('burger').addEventListener('click', openMenu);
 	document.getElementById('close').addEventListener('click', closeMenu);
 
+  const background = document.querySelector('.mob-menu-background');
+
 function closeMenu(){
-    // console.log('closed')
+    console.log('closed')
     const mobMenu = document.querySelector('.mob-menu');
     mobMenu?.classList.add('none');
 }
+
+background.addEventListener('click', () => closeMenu());
 
 
 </script>
