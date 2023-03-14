@@ -43,33 +43,6 @@ main {
             width: 850px;
         }
     }
-    
-
-    // .courses {
-
-    //     &-mob {
-    //         display: none;
-    //     }
-
-    //     &-img-mob {
-    //         display: none;
-    //     }
-
-    // }
-
-    // .about {
-
-    //     &-img-mob {
-    //         display: none;
-    //     }
-    // }
-
-    // .btn {
-    //     &-mob {
-    //         display: none;
-    //     }
-    // }
-
 }
 
 @media (max-width: 1445px) {
@@ -131,63 +104,7 @@ main {
         }
 
 
-    //     .courses {
-    //         &-img {
-    //             &-desk {
-    //                 display: none;
-    //             }
-    //             &-mob{
-    //                 display: block;
-    //                 width: 98%;
-    //                 margin: 0 auto 5px;
-    //             }
-    //         }
-    //     }
 
-    //     .section {
-
-    //         p {
-    //             font-size: 1.4em;
-    //             margin: 0 10px 5px;
-    //         }
-
-    //         &-img {
-    //             margin: 10px auto;
-    //         }
-
-    //         &-btn {
-    //             &-desk {
-    //                 display: none;
-    //             }
-                
-    //             &-mob {
-    //                 margin: 0 5px 5px;
-    //                 display: block;
-    //             }
-    //         }
-    //     }
-
-    //     .about {
-    //         margin-top: 10px;
-            
-    //         &-img {
-    //             display: none;
-    //         }
-            
-    //         &-img-mob {
-    //             display: block;
-    //             margin: 0 auto 10px;
-    //         }
-
-    //         .quals {
-    //             padding-top: 10px;
-    //         }
-
-    //         li {
-    //             margin: 10px 0 10px 15px;
-    //         }
-            
-    //     }
     }
 }
 
@@ -211,32 +128,3 @@ main {
             }
         }
     }
-
-
-// @media (max-width: 480px) {
-
-//     main {
-
-        
-//         .courses {
-//             p {
-//                 width: 100%;
-//                 margin: 5px 5px;
-//             }
-//             &-img {
-//                 // width: 100%;
-//                 margin: 0;
-//                 &-belay {
-//                     width: 150px;
-//                 }
-                
-//             }
-            
-//             &-butt {
-//                 margin: 10px;
-//             }
-//         }
-        
-        
-//     }
-// }
