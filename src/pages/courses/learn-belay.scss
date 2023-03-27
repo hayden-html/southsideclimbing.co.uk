@@ -1,5 +1,10 @@
 // sass --watch ./courses/learn-belay.scss ./asset/css/learn-belay.css
-
+h2 {
+    font-size: 35px !important;
+    @media (max-width: 780px) {
+        font-size: 30px !important;
+    }
+}
 .private {
 
     &-info {
@@ -24,11 +29,6 @@
         margin-bottom: 8px;
     }
 
-    &-sub {
-        font-weight: 500;
-        font-size: 2em;
-    }
-
     &-desc {
         display: inline-block;
         font-weight: 600;
@@ -41,8 +41,7 @@
     }
 
     &-info {
-        padding: 0 20px;
-        max-width: 100%;
+        padding: 0 10px 0 0;
     }
 
     &-buttons {

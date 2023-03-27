@@ -47,8 +47,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
     font-family: 'Noto-Sans', sans-serif;
 }
 
@@ -59,7 +58,9 @@ p {
 }
 
 br {
-    margin-bottom: 8px;
+    display: block;
+    margin-bottom: 10px;
+    content: " ";
 }
 
 button,
@@ -115,16 +116,13 @@ main {
 
         h1,
         h2 {
-            font-family: 'Noto-Sans', sans-serif;
-            font-size: 45px;
             font-weight: 500;
             color: #19A3DE;
             margin: 5px 0 8px;
-
+            font-size: 45px;
             @media (max-width: 780px) {
                 font-size: 40px;
             }
-
         }
 
         .sub {
@@ -190,7 +188,7 @@ main {
                 h1, h2 {
                     order: 1;
                 }
-                img {
+                &-img {
                     order: 2;
                     flex-basis: 100%;
                     margin: 0 auto 8px;
@@ -204,10 +202,6 @@ main {
             }
         }
     }
-}
-
-br {
-    margin-bottom: 5px;
 }
 
 .horiz {

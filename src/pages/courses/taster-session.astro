@@ -3,19 +3,45 @@ import './learn-belay.scss'
 import Frame from '../../layouts/frame.astro'
 import Accordian from '../../components/Accordian.astro'
 import Qa from '../../components/parts/Qa.astro'
+import Spec from '../../components/parts/Spec.astro';
+
 ---
 
 <Frame title={' - Taster Session'} description={"This family session is great for to see whether you'd enjoy climbing. You'll get a chance to climb on Portland rock and learn a bit about the sport."}>
 
     <div class="seshpage card">
-        <h1 class="seshpage-title">Taster Session</h1>
+        <h1>Taster Session</h1>
         <div class="seshpage-options">
             <img class="seshpage-img" src="/media/taster.jpg" alt="A middle-aged woman smiling whilst suspended off a rope with the sea behind her">
             <div class="seshpage-info">
-                <p class="private-text card-text">This family friendly session runs on weekends during the school holidays. You'll experience what it’s like to be climber and learn about the sport. We focus on getting you as much time on the wall as possible, therefore, there won't be enough instruction for you to climb outside after the course.</p>
+                <Spec loc="Portland" duration="3 Hours" group="Up To 6 Climbers"/>
+                <p class="private-text card-text">Our taster session will give you an introduction to the sport. We run these sessions in small groups, so you'll have plenty of time to climb. Unlike our courses, we don't teach belaying or knot tying in this session.</p>
             </div>
             <div class="seshpage-buttons">
-                <script src="https://assets.ticketinghub.com/checkout.js" data-widget="b4e7473f-c3d3-4548-9477-690986624f62"></script>
+            </div>
+        </div>
+    </div>
+
+    <div class="seshpage-info open-info card">
+        <h2>Private Session</h2>
+        <div class="seshpage-info">
+            <Spec age="Ages 12 & Up" cost="£25/pp"/>
+            <p class="private-text bs-text">These sessions are great for get-togethers in the sun, as Portland offers lots of exciting climbing locations with beautiful views of Dorset.</p>
+
+            <div class="seshpage-buttons">
+                <script is:inline src="https://assets.ticketinghub.com/checkout.js" data-widget="1ca6347b-75d8-4064-8250-83a51772efd2"></script>
+            </div>
+        </div>
+    </div>
+
+    <div class="seshpage-info card">
+        <h2>Open Guiding</h2>
+        <div class="seshpage-info">
+                <Spec age="Ages 7 & Up" cost="From £80"/>
+            <p class="private-text bs-text">In this family friendly session, you’ll experience the adventure of rock climbing. This activity is suited to people who have never climbed before, and is fine if you're afraid of heights.</p>
+
+            <div class="seshpage-buttons">
+                <script is:inline src="https://assets.ticketinghub.com/checkout.js" data-widget="b4e7473f-c3d3-4548-9477-690986624f62"></script>
             </div>
         </div>
     </div>

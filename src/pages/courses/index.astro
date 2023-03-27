@@ -1,5 +1,6 @@
 ---
 import Frame from "../../layouts/frame.astro";
+import Spec from "../../components/parts/Spec.astro";
 import "./courses.scss";
 ---
 
@@ -7,115 +8,92 @@ import "./courses.scss";
   title={" - Courses"}
   description={"We run a variety of climbing courses for all abilites. We specialise our course in Dorset, however, "}
 >
-  <div class="card" id="L2B">
-    <h2>Learn to Belay</h2>
-    <div class="section">
-      <img
-        src="/media/L2B.jpg"
-        alt="A beginner learning to tie a rope with the instructor"
-        class="img-50"
-      />
-      <div class="info">
-        <div class="sub">
-          <span class="sub-li">8 Hours ·</span><span
-            class="sub-li"
-            >2-6 Climbers ·
-          </span><span class="sub-li">Beginners</span>
-        </div>
-        <p>
-          These courses are ideal for beginners to roped climbing . You’ll learn
-          how to tie knots, belay and climb.
-        </p>
-
-        <a href="/courses/learn-to-belay/" class="btn">Book Here</a>
-      </div>
+<div class="card" id="L2B">
+  <h2>Learn to Belay</h2>
+  <div class="section">
+    <img
+    src="/media/L2B.jpg"
+    alt="A beginner learning to tie a rope with the instructor"
+    class="img-50 section-img"
+    />
+    <div class="info">
+      <Spec loc="Swanage & Portland" duration="8 Hours" group="Upto 6 climber"/>
+      <p>
+        These courses are ideal for beginners to roped climbing . You’ll learn
+        how to tie knots, belay and climb.
+      </p>
+      
+      <a href="/courses/learn-to-belay/" class="btn">Book Here</a>
     </div>
   </div>
+</div>
 
-  <div class="card" id="taster">
+<div class="card" id="taster">
     <h2>Taster Session</h2>
     <div class="section">
       <div class="info">
-          <div class="sub">
-            <span class="sub-li">3 Hours ·</span><span
-              class="sub-li"
-              >2-6 Climbers ·
-            </span><span class="sub-li">Beginners ·</span><span
-              class="sub-li"> Portland</span
-            >
-          </div>
+        <Spec loc="Portland" duration="3 hours" group="Upto 6 Climbers"></Spec>
           <p>
             In this session, you get to experience climbing on Portland rock. It's
             perfect for beginners that want a small insight of climbing outdoors.
           </p>
-            <a href="/courses/taster-session" class="btn">Book Here</a>
+          <a href="/courses/taster-session" class="btn">Book Here</a>
         </div>
-      <img
+        <img
         src="/media/taster-session.jpg"
         alt="A group watching a climber start his climb, one of the members is belaying him whilst the others are learning"
-        class="img-50"
-      />
-    </div>
+        class="img-50 section-img"
+        />
+      </div>
   </div>
-
+  
   <div class="card" id="coaching">
     <h2>London Coaching</h2>
     <div class="section">
       <img
-        src="/media/coaching.jpg"
-        alt="Hayden is climbing on an overhanging bouldering wall, using just his finger tips on the small crimps."
-        class="img-50"
+      src="/media/coaching.jpg"
+      alt="Hayden is climbing on an overhanging bouldering wall, using just his finger tips on the small crimps."
+      class="img-50 section-img"
       />
       <div class="info">
-        <div class="sub">
-          <span class="sub-li"></span><span class="sub-li"
-            >Beginner - Intermediate ·
-          </span><span class="sub-li">Private</span>
-        </div>
-        <p>
-          Coaching is now available at Vauxwall East. Hayden has been coaching
-          climbing for 5 years and is a qualified coach. If you're looking to
-          learn technique or push your grade, he’d love to help.
-        </p>
-        <a href="/courses/coaching/" class="btn">Book Here</a>
-      </div>
+<Spec cost="From £33/hour"/>
+      <p>
+        Coaching is now available at Vauxwall East. Hayden has been coaching
+        climbing for 5 years and is a qualified coach. If you're looking to
+        learn technique or push your grade, he’d love to help.
+      </p>
+      <a href="/courses/coaching/" class="btn">Book Here</a>
     </div>
   </div>
+</div>
 
-  <div class="card" id="peak">
-    <h2>Peak District</h2>
-    <img
-      src="/media/stanage-popular.jpg"
-      alt="Hayden sat in his harness, suspended next to the rock"
-      class="peak-img"
-    />
-    <div class="section-block">
-      <div class="info">
-        <div class="sub">
-          <span class="sub-li">2 Days ·</span>
-          <span class="sub-li">2-6 Climbers ·</span>
-          <span class="sub-li">Beginners</span>
-        </div>
+<div class="card" id="peak">
+  <h2>Peak District</h2>
+  <img
+  src="/media/stanage-popular.jpg"
+  alt="Hayden sat in his harness, suspended next to the rock"
+  class="peak-img"
+  />
+  <div class="section-block">
+    <div class="info">
+        <Spec loc="Hathersage" duration="2 Days" group="Upto 6 Climbers"/>
         <p>
           The Peak District is the home of gritstone climbing and it’s epic
           scenery. We’ll climb Stanage Edge and another local crag near
           Hathersage.
         </p>
-
-          <a href="/courses/peak-district/" class="btn">Book Here</a>
+        
+        <a href="/courses/peak-district/" class="btn">Book Here</a>
       </div>
     </div>
   </div>
-
+  
   <div class="card" id="group">
     <h2>Group Bookings</h2>
     <div class="section">
       <div class="info">
-        <div class="sub">
-          <span class="sub-li">6+ Climbers ·</span>
-          <span class="sub-li">Corporate Teams ·</span>
-          <span class="sub-li">Youth Groups</span>
-        </div>
+        <Spec duration="8 Hours" group="Upto 12 Climber"/>
+        
         <p>
           Whether you’re looking for a team building day, or a memorable
           experience, we have something for you.
@@ -126,7 +104,7 @@ import "./courses.scss";
       <img
         src="/media/groups.jpg"
         alt="Hayden sat in his harness, suspended next to the rock"
-        class="img-50"
+        class="img-50 section-img"
       />
     </div>
   </div>

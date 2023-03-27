@@ -3,22 +3,20 @@ import './learn-belay.scss'
 import Frame from '../../layouts/frame.astro'
 import Accordian from '../../components/Accordian.astro'
 import Qa from '../../components/parts/Qa.astro'
+import Spec from '../../components/parts/Spec.astro';
 ---
 
 <Frame title={' - Peak District'} description={'We are running limited courses in the Peak District this year, the perfect opportunity for you to climb gritstone.'}>
   
     
         <div class="seshpage card">
-            <h1 class="seshpage-title">Peak District</h1>
+            <h1>Peak District</h1>
             <div class="seshpage-options">
                 <img class="seshpage-img" src="/media/stanage-popular.jpg"
                     alt="A middle-aged woman smiling whilst suspended off a rope with the sea behind her">
                 <div class="seshpage-info">
                     <div class="seshpage-info">
-                        <div class="seshpage-desc"><span class="seshpage-sub-li">2 Days · </span><span
-                                class="seshpage-sub-li">1-6 Climbers · </span><span class="seshpage-sub-li">Ages
-                                7+</span>
-                        </div>
+                        <Spec loc="Hathersage" duration="2 Days" age="Ages 7+" group="Up To 6 Climbers"/>
                     <p class="private-text">The Peak District is our favourite place to climb in the UK. The rock is made of gritstone which feels rough and grippy to climb. We're running limited 2-day courses to give you an opportunity to experience the peaks. You be climbing cracks not far from Hathersage including Stanage edge Froggatt or Bamford.</p>
                 </div>
                         <div class="seshpage-buttons">
