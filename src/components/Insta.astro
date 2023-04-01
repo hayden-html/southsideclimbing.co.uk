@@ -1,15 +1,11 @@
 ---
-import { Picture } from '@astrojs/image/components';
 
-import gearUp from './../images/gear-up.jpg'
-import womens from './../images/womens.jpg'
-import group from './../images/group.jpg'
 ---
 
 <div class="insta-slides">
-    <class class="slide" id="1"><Picture src={gearUp} widths={[330, 230]} sizes="min-width(727px) 330px, 230px" aspectRatio="1:1" format='avif' alt="The instructor is exchanging equipment with his client" class="slide"/></class>
-    <class class="slide" id="slide-3"><Picture src={womens} widths={[330, 230]} sizes="min-width(727px) 330px, 230px" aspectRatio="1:1" format='avif' alt="A young woman in placing her foot in a high up position" class="slide"/></class>
-    <class class="slide" id="slide-3"><Picture src={group} widths={[330, 230]} sizes="min-width(727px) 330px, 230px" aspectRatio="1:1" format='avif' alt="A group at the bottom of a climbing, being taught how to belay by the instructor." class="slide"/></class>
+    <div class="slide"><img data-src='/media/gear-up.jpg' alt="The instructor is exchanging equipment with his client"/></div>
+    <div class="slide"><img data-src='/media/womens.jpg' alt="A young woman in placing her foot in a high up position"/></div>
+    <div class="slide"><img data-src='/media/group.jpg' alt="A group at the bottom of a climbing, being taught how to belay by the instructor."/></div>
     <!-- <div class="slide" id="4">4</div> -->
 </div>
 
@@ -20,8 +16,6 @@ import group from './../images/group.jpg'
         max-width: 1008px;
         margin: 0 auto 20px;
         padding: 0 25px;
-        :nth-child(2), :nth-child(3) {
-        }
         :nth-child(4){
             display: none;
         }
