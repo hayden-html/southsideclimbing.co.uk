@@ -2,8 +2,7 @@
 import Frame from "../layouts/frame.astro";
 import ContactForm from "../components/ContactForm.astro";
 import InstaWidget from "../components/InstaWidget.astro";
-// import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-// import CookiePopUp from '../components/CookiePopUp.astro';
+import Insta from "../components/Insta.astro";
 import "../styles/index.scss";
 ---
 
@@ -12,60 +11,61 @@ import "../styles/index.scss";
   desc="Experience climbing with Southside Climbing. We our based in Dorset, and run climbing courses for beginners at Portland. You can learn to climb and belay your friends and family!"
 >
 
-  <div class="hero">
-    <div class="hero-text card">Experience<br />Climbing<br />Dorset</div>
-    <img
-      src="/media/dancing.jpg"
-      alt="A young man climbing in the sunset with the sea behind him"
-      class="hero-img"
-    />
 
-  </div>
+<div class="hero">
+  <div class="hero-text card">Experience<br />Climbing<br />Dorset</div>
+  <img
+  src="/media/dancing.jpg"
+  alt="A young man climbing in the sunset with the sea behind him"
+  class="hero-img"
+  />
+  
+</div>
 
-  <div class="card" id="courses">
-    <div class="section">
+<div class="card" id="courses">
+  <div class="section">
     <div class="info">
       <h2>Our courses</h2>
-        <img
-          src="/media/gearing-up.jpg"
-          alt="Myself gearing up, and passing karabiners to sam"
-          class="img-mob"
-        />
-        <p>
-          We host a range of courses at Swanage and Portland. The sessions are ideal for beginners that want to learn rope climbing, but also for the adventure seekers.
+      <img
+      src="/media/gearing-up.jpg"
+      alt="Myself gearing up, and passing karabiners to sam"
+      class="img-mob"
+      />
+      <p>
+        We host a range of courses at Swanage and Portland. The sessions are ideal for beginners that want to learn rope climbing, but also for the adventure seekers.
         </p>
         <a class="btn section-btn" href="./courses">See Courses</a>
       </div>
-        <img
-          src="/media/belay.jpg"
-          alt="Myself belaying from my harness, gripping the climbing rope"
-          class="img-desk"
-        />
+      <img
+      src="/media/belay.jpg"
+      alt="Myself belaying from my harness, gripping the climbing rope"
+      class="img-desk"
+      />
     </div>
   </div>
-
+  
   <div class="card" id="about">
-      <div class="section">
-        <img
+    <div class="section">
+      <img
           srcset="/media/about.jpg"
           alt="Hayden sat in his harness, suspended next to the rock"
           class="img-desk"/>
-            <div class="info">
-        <h2>About Us</h2>
-        <img
-          srcset="/media/about-mob.jpg"
-          alt="Hayden sat in his harness, suspended next to the rock"
-          class="img-mob"
-        />
-        <p>
-          Hayden started Southside Climbing as he wanted to share his passion with new climbers. We aim to deliver fun and exciting sessions as you start your climbing journey.
-        </p>
-        <a class="btn" href="./about">See More</a>
-            </div>
+          <div class="info">
+            <h2>About Us</h2>
+            <img
+            srcset="/media/about-mob.jpg"
+            alt="Hayden sat in his harness, suspended next to the rock"
+            class="img-mob"
+            />
+            <p>
+              Hayden started Southside Climbing as he wanted to share his passion with new climbers. We aim to deliver fun and exciting sessions as you start your climbing journey.
+            </p>
+            <a class="btn" href="./about">See More</a>
+          </div>
+        </div>
       </div>
-  </div>
-
-  <InstaWidget/>
+      
+      <Insta />
 
   <ContactForm />
 </Frame>

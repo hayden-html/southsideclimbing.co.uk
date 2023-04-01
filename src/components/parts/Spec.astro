@@ -1,14 +1,14 @@
 ---
-const {loc, duration, group, cost, age} = Astro.props
+const { loc, duration, group, cost, age } = Astro.props;
 ---
-<div class="specs">
+{<div class="specs">
     {loc && <div class="line"><img src="/media/icons/location.svg" alt="location icon"><h6>{loc}</h6></div>}
     {duration && <div class="line"><img src="/media/icons/time.svg" alt="clock icon"><h6>{duration}</h6></div>}
     {group && <div class="line"><img src="/media/icons/people.svg" alt="group icon"><h6>{group}</h6></div>}
     {age && <div class="line"><img src="/media/icons/check-lg.svg" alt="Tick" id="tick"><h6>{age}</h6></div>}
     {cost && <div class="line"><img src="/media/icons/ticket-fill.svg" alt="pound symbol" id="cost"><h6>{cost}</h6></div>}
 
-</div>
+</div>}
 
 <style lang="scss">
     .specs {

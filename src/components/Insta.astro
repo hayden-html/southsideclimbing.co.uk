@@ -1,0 +1,39 @@
+---
+import { Picture } from '@astrojs/image/components';
+
+import gearUp from './../images/gear-up.jpg'
+import womens from './../images/womens.jpg'
+import group from './../images/group.jpg'
+---
+
+<div class="insta-slides">
+    <Picture src={gearUp} widths={[330, 230]} sizes="min-width(727px) 330px, 230px" aspectRatio="1:1" format='avif' alt="The instructor is exchanging equipment with his client" class="slide"/>
+    <Picture src={womens} widths={[330, 230]} sizes="min-width(727px) 330px, 230px" aspectRatio="1:1" format='avif' alt="A young woman in placing her foot in a high up position" class="slide"/>
+    <Picture src={group} widths={[330, 230]} sizes="min-width(727px) 330px, 230px" aspectRatio="1:1" format='avif' alt="A group at the bottom of a climbing, being taught how to belay by the instructor." class="slide"/>
+    <!-- <div class="slide" id="4">4</div> -->
+</div>
+
+<style lang="scss">
+    .insta-slides {
+        display: flex;
+        // width: max-content;
+        max-width: 1008px;
+        margin: 0 auto 20px;
+        padding: 0 25px;
+        :nth-child(4){
+            display: none;
+        }
+    }
+    .slide {
+        max-width: 330px;
+        width: 33%;
+        aspect-ratio: 1 / 1;
+        margin: 0 3px;
+    }
+    
+    @media (max-width: 830px) {
+        .insta-slides {
+            padding: 0 10px;
+        }
+    }
+</style>
