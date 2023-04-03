@@ -4,6 +4,11 @@ import ContactForm from "../components/ContactForm.astro";
 import InstaWidget from "../components/InstaWidget.astro";
 import Insta from "../components/Insta.astro";
 import "../styles/index.scss";
+
+import { Image, Picture } from '@astrojs/image/components';
+
+import Belay from "../images/belay.jpg";
+import Dancing from "../images/dancing.jpg";
 ---
 
 <Frame
@@ -14,12 +19,13 @@ import "../styles/index.scss";
 
 <div class="hero">
   <div class="hero-text card">Experience<br />Climbing<br />Dorset</div>
-  <img
-  data-src="/media/dancing.jpg"
+  <!-- <img
+  src="/media/dancing.jpg"
   alt="A young man climbing in the sunset with the sea behind him"
   class="hero-img"
-  />
-  
+  /> -->
+  <Picture src={Dancing} widths={[850, 625, 408]} aspectRatio="16:9" alt="A young man climbing in the sunset with the sea behind him" class="hero-img"/>
+  <!-- , (max-width: 430px) 408px -->
 </div>
 
 <div class="card" id="courses">
@@ -27,7 +33,7 @@ import "../styles/index.scss";
     <div class="info">
       <h2>Our courses</h2>
       <img
-      data-src="/media/gearing-up.jpg"
+      src="/media/gearing-up.jpg"
       alt="Myself gearing up, and passing karabiners to sam"
       class="img-mob"
       />
@@ -36,8 +42,11 @@ import "../styles/index.scss";
         </p>
         <a class="btn section-btn" href="./courses">See Courses</a>
       </div>
-      <img
-      data-src="/media/belay.jpg"
+      <Image
+      src={Belay}
+      width={270}
+      height={338}
+      format="avif"
       alt="Myself belaying from my harness, gripping the climbing rope"
       class="img-desk"
       />
@@ -47,13 +56,13 @@ import "../styles/index.scss";
   <div class="card" id="about">
     <div class="section">
       <img
-          data-src="/media/about.jpg"
+          src="/media/about.jpg"
           alt="Hayden sat in his harness, suspended next to the rock"
           class="img-desk"/>
           <div class="info">
             <h2>About Us</h2>
             <img
-            data-src="/media/about-mob.jpg"
+            src="/media/about-mob.jpg"
             alt="Hayden sat in his harness, suspended next to the rock"
             class="img-mob"
             />
