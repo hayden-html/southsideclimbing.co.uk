@@ -39,9 +39,9 @@ main {
             margin: auto 0px auto 0px;
             word-spacing: 100vw;
         }
-        &-img {
-            width: 850px;
-        }
+        // &-img {
+        //     width: 850px;
+        // }
     }
 }
 
@@ -67,11 +67,9 @@ main {
             }
             
             &-img {
-                width: 95%;
                 display: block;
                 order: 1;
                 margin: 0 auto 15px;
-                max-width: 800px;
             }
         }
 
@@ -90,7 +88,6 @@ main {
             
             
             &-img {
-                width: 95%;
                 display: block;
                 order: 1;
                 margin: 0 auto 15px;
@@ -125,7 +122,6 @@ main {
             padding: 0 !important;
             .hero-img {
                 margin-top: 8px;
-                width: 95%;
             }
         }
     }
