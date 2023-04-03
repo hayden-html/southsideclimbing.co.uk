@@ -24,7 +24,7 @@ main {
         display: flex;
         width: max-content;
 
-        margin: 20px auto;
+        margin: 0 auto 20px;
         overflow: visible;
 
         &-text {
@@ -40,7 +40,7 @@ main {
             word-spacing: 100vw;
         }
         // &-img {
-        //     width: 850px;
+        //     max-width: 850px;
         // }
     }
 }
@@ -54,8 +54,7 @@ main {
     main {
         .hero {
             display: block;
-            width: 100%;
-            margin: 0;
+            margin: 0 auto;
             flex-wrap: wrap;
             
             .hero-text {
@@ -81,8 +80,6 @@ main {
     main {
 
         .hero {
-            width: 100%;
-            margin: 0;
             flex-wrap: wrap;
             
             
@@ -91,7 +88,6 @@ main {
                 display: block;
                 order: 1;
                 margin: 0 auto 15px;
-                // max-width: 600px;
             }
         }
 
@@ -100,16 +96,12 @@ main {
                 width: 270px;
             }
         }
-
-
-
     }
 }
 
     @media (max-width: 670px) {
        main {
         .about {
-
             .flex {
                 display: block;
             }
