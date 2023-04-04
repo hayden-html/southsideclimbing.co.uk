@@ -3,33 +3,39 @@
 ---
 
 <div class="insta-slides">
-    <div class="slide"><img src='/media/gear-up.jpg' alt="The instructor is exchanging equipment with his client"/></div>
-    <div class="slide"><img src='/media/womens.jpg' alt="A young woman in placing her foot in a high up position"/></div>
-    <div class="slide"><img src='/media/group.jpg' alt="A group at the bottom of a climbing, being taught how to belay by the instructor."/></div>
-    <!-- <div class="slide" id="4">4</div> -->
+        <img src='/media/gear-up-insta-b.jpg' alt="The instructor is exchanging equipment with his client" class="slide"/>
+        <img src='/media/womens.jpg' alt="The instructor is exchanging equipment with his client" class="slide"/>
+        <img src='/media/battleship-insta.jpg' alt="The instructor is exchanging equipment with his client" class="slide"/>
 </div>
 
 <style lang="scss">
     .insta-slides {
         display: flex;
-        // width: max-content;
+        align-self: center;
+        width: max-content;
+        width: 100svw;
         max-width: 1008px;
-        margin: 0 auto 20px;
-        padding: 0 25px;
-        :nth-child(4){
+        justify-content: center;
+        margin-bottom: 10px;
+        img:nth-child(1){
             display: none;
         }
-    }
-    .slide {
-        max-width: 330px;
-        width: 33%;
-        aspect-ratio: 1 / 1;
-        margin: 0 3px;
-    }
-    
-    @media (max-width: 830px) {
-        .insta-slides {
-            padding: 0 10px;
+        .slide {
+            max-width: 330px;
+            width: 45svw;
+            margin: 0 3px;
+            @media (min-width: 910px) {
+                width: 28svw;
+            }
+        }
+        @media (min-width: 450px) {
+        margin: 0 auto 20px;
+        .slide {
+            width: 30svw;
+        }
+        img:nth-child(1){
+            display: block;
+        }
         }
     }
 </style>

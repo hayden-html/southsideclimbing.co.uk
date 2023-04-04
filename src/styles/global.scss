@@ -202,6 +202,14 @@ main {
             }
         }
     }
+
+    @media (max-width: 1000px) {
+        padding: 15px 0;
+    }
+    @media (max-width: 750px) {
+        padding: 10px 0;
+    }
+
 }
 
 .horiz {
@@ -220,3 +228,4 @@ main {
         margin: 10px;
     }
 }
+

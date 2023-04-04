@@ -23,7 +23,6 @@ main {
     .hero {
         display: flex;
         width: max-content;
-
         margin: 0 auto 20px;
         overflow: visible;
 
@@ -39,9 +38,9 @@ main {
             margin: auto 0px auto 0px;
             word-spacing: 100vw;
         }
-        // &-img {
-        //     max-width: 850px;
-        // }
+        &-img {
+            max-width: 850px;
+        }
     }
 }
 
@@ -108,12 +107,4 @@ main {
         }
         } 
     
-    }
-    @media (max-width: 600px) {
-        main {
-            padding: 0 !important;
-            .hero-img {
-                margin-top: 8px;
-            }
-        }
     }

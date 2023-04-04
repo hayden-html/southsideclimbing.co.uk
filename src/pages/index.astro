@@ -1,7 +1,6 @@
 ---
 import Frame from "../layouts/frame.astro";
 import ContactForm from "../components/ContactForm.astro";
-import InstaWidget from "../components/InstaWidget.astro";
 import Insta from "../components/Insta.astro";
 import "../styles/index.scss";
 
@@ -19,12 +18,11 @@ import Dancing from "../images/dancing.jpg";
 
 <div class="hero">
   <div class="hero-text card">Experience<br />Climbing<br />Dorset</div>
-  <!-- <img
-  src="/media/dancing.jpg"
+  <img
+  srcset="/media/dancing-s.jpg 465w, /media/dancing-m.jpg 665w, /media/dancing.jpg 850w" sizes=""
   alt="A young man climbing in the sunset with the sea behind him"
   class="hero-img"
-  /> -->
-  <Picture src={Dancing} widths={[850, 625, 408]} aspectRatio="16:9" sizes="(min-width: 900px) 850px, (max-width: 900px) 90vw" alt="A young man climbing in the sunset with the sea behind him" class="hero-img"/>
+  />
 
   <!-- , (max-width: 430px) 408px -->
 </div>
@@ -43,14 +41,7 @@ import Dancing from "../images/dancing.jpg";
         </p>
         <a class="btn section-btn" href="./courses">See Courses</a>
       </div>
-      <Image
-      src={Belay}
-      width={270}
-      height={338}
-      format="avif"
-      alt="Myself belaying from my harness, gripping the climbing rope"
-      class="img-desk"
-      />
+      <img src="/media/belay.jpg" alt="someone holding the rope either side of the belay device" class="img-desk">
     </div>
   </div>
   
@@ -75,7 +66,7 @@ import Dancing from "../images/dancing.jpg";
         </div>
       </div>
       
-      <!-- <Insta /> -->
+      <Insta />
 
   <ContactForm />
 </Frame>
