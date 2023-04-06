@@ -3,13 +3,11 @@
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.scss";
 
-
-
-const { title, desc } = Astro.props;
+const { title, description } = Astro.props;
 
 export interface Props {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
 }
 ---
 
@@ -19,8 +17,8 @@ export interface Props {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Southside Climbing{title}</title>
-  <meta name="title" content={`Southside Climbing - ${title}`} />
-  <meta name="description" content={desc}/>
+  <meta name="title" content={'Southside Climbing ' + title} />
+  <meta name="description" content={description} />
 
   <!-- FAVICON -->
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
