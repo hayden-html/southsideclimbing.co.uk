@@ -89,11 +89,8 @@ main {
                 margin: 0 auto 15px;
             }
         }
-
-        #about {
-            .img-mob {
-                width: 270px;
-            }
+        #about img{
+            width: min(405px, 85%);
         }
     }
 }
