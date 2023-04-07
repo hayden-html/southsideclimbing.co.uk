@@ -4,10 +4,8 @@ import "../styles/contact.scss";
 import Insta from "../components/Insta.astro";
 ---
 
-<Frame
-  title={" - Contact"}
-  description={"Please get in touch if you wish to enquire"}
->
+<Frame>
+  <meta slot="ExtraHead" name="robots" content="noindex">
   <div class="contact card">
     <h1>Contact Us</h1>
 

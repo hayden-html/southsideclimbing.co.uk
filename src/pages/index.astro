@@ -3,11 +3,6 @@ import Frame from "../layouts/frame.astro";
 import ContactForm from "../components/ContactForm.astro";
 import Insta from "../components/Insta.astro";
 import "../styles/index.scss";
-
-import { Image, Picture } from '@astrojs/image/components';
-
-import Belay from "../images/belay.jpg";
-import Dancing from "../images/dancing.jpg";
 ---
 
 <Frame
@@ -19,7 +14,7 @@ import Dancing from "../images/dancing.jpg";
 <div class="hero">
   <div class="hero-text card">Experience<br />Climbing<br />Dorset</div>
   <img
-  srcset="/media/dancing-s.jpg 465w, /media/dancing-m.jpg 665w, /media/dancing.jpg 850w" sizes=""
+  srcset="/media/dancing-420-wide.jpg 465w, /media/dancing-wide-600.jpg 665w, /media/dancing-wide-850.jpg 1445w, /media/dancing-desk.jpg"
   alt="A young man climbing in the sunset with the sea behind him"
   class="hero-img"
   />
@@ -59,7 +54,7 @@ import Dancing from "../images/dancing.jpg";
             <p>
               Hayden started Southside Climbing as he wanted to share his passion with new climbers. We aim to deliver fun and exciting sessions as you start your climbing journey.
             </p>
-            <a class="btn" href="./about">See More</a>
+            <a class="btn" href="./about">More About Us</a>
           </div>
         </div>
       </div>

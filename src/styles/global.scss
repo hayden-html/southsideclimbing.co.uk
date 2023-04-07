@@ -169,7 +169,7 @@ main {
                 }
 
                 &-mob {
-                    width: clamp(290px, 98%, 665px);
+                    width: min(405px, 85%);
                     margin: 0 auto 8px;
                     display: block;
                 }
