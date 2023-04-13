@@ -116,8 +116,6 @@ br {
     }
 
     picture {
-        // height: min-content;
-        // max-height: 260px;
         display: flex;
         align-self: center;
 
@@ -125,7 +123,6 @@ br {
             display: block;
             margin: 0 auto 8px;
             width: min(405px, 85%);
-            // object-fit: cover;
         }
     }
 
