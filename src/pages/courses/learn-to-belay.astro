@@ -1,72 +1,134 @@
 ---
-import './learn-belay.scss'
-import Frame from '../../layouts/frame.astro'
-import Accordian from '../../components/Accordian.astro'
-import Qa from '../../components/parts/Qa.astro'
-import Spec from '../../components/parts/Spec.astro'
+import "./learn-belay.scss";
+import Frame from "../../layouts/frame.astro";
+import Accordian from "../../components/Accordian.astro";
+import Qa from "../../components/parts/Qa.astro";
+import Spec from "../../components/parts/Spec.astro";
 ---
 
-<Frame title={' - Learn to Belay'} description={'Are you looking to kickoff your climbing? This course will teach you all there is to climbing and belaying.'}>
-
-        <div class="seshpage card">
-            <h1>Learn to Belay</h1>
-            <div class="seshpage-options">
-                <img class="seshpage-img" src="/media/neddy-hang.jpg" alt="A middle-aged woman smiling whilst suspended off a rope with the sea behind her">
-                <div class="seshpage-info">
-                    <Spec duration="8 Hours" group="Up To 6 Climbers"/>
-                    <p class="private-text bs-text">In this course, you’ll learn how to climb and belay each other on a rope. With these skills, you’ll be able to climb at your local roped wall on bottom ropes and progress on to sport climbing. Here in Dorset, our coast is full of stunning places to climb. We provide all the necessary safety equipment and our expertise of rock climbing.</p>
-                </div>
-            </div>
-            </div>
-            <div class="seshpage-info private-info card">
-                <h2>Private Guiding</h2>
-                <div class="seshpage-info">
-                        <Spec loc="Swanage Or Portland"  
-                        age="Ages 7 & Up" cost="From £160"/>
-                    <p class="private-text bs-text">On booking, you will have the choice of either climbing at Portland or Swanage. Each of these locations have multiple crags, we like to choose where the best conditions are to climb, but if you have a preference of crag, just let us know.</p>
-
-                    <div class="seshpage-buttons">
-                        <script is:inline src="https://assets.ticketinghub.com/checkout.js" data-widget="38de41bd-8ac6-4d43-b14a-1bbc49333c8f"></script>
-                    </div>
-                </div>
-            </div>
-            <div class="seshpage-info open-info card">
-                <h2>Open Session</h2>
-                <div class="seshpage-info">
-                    <Spec loc="Portland"  
-                        age="Ages 12 & Up" cost="From £50"/>
-                    <p class="private-text bs-text">These courses are great for meeting new people who also want to start climbing.  We run our open courses on the last Sunday of every month at Portland. There are 6 spaces per instructor, so you're guaranteed plenty of time on the rock!</p>
-
-                    <div class="seshpage-buttons">
-                        <script is:inline src="https://assets.ticketinghub.com/checkout.js" data-widget="05471900-18fd-410c-895f-6e97b0f196c7"></script>
-                    </div>
-                </div>
-            </div>
-            
-        <div class="included card">
-            <div class="gear">
-                <img class="gear-img" src="/media/icons/helmet.svg" alt="helmet icon">
-                <div class="gear-text">All Equipment Included</div>
-            </div>
-            <div class="divide"></div>
-            <div class="bring">
-                <h4 class="bring-title">You'll Need:</h4>
-                <ul>
-                    <li>A sturdy pair of shoes</li>
-                    <li>Lunch, snacks & water</li>
-                    <li>A jumper and waterproof</li>
-                </ul>
+<Frame
+    title={" - Learn to Belay"}
+    description={"Are you looking to kickoff your climbing? This course will teach you all there is to climbing and belaying."}
+>
+    <div class="seshpage card">
+        <h1>Learn to Belay</h1>
+        <div class="seshpage-options">
+            <img
+                class="seshpage-img"
+                src="/media/neddy-hang.jpg"
+                alt="A middle-aged woman smiling whilst suspended off a rope with the sea behind her"
+            />
+            <div class="seshpage-info">
+                <Spec duration="8 Hours" group="Up To 6 Climbers" />
+                <p class="private-text bs-text">
+                    In this course, you’ll learn how to climb and belay each
+                    other on a rope. With these skills, you’ll be able to climb
+                    at your local roped wall on bottom ropes and progress on to
+                    sport climbing. Here in Dorset, our coast is full of
+                    stunning places to climb. We provide all the necessary
+                    safety equipment and our expertise of rock climbing.
+                </p>
             </div>
         </div>
-        
-        <Accordian>
-            <Qa question="Who can climb?">With roped climbing, climbers need to be aged 9+ and can fit a helmet and harness. Equipment sizes can be found on the <a href="/resources/policies/booking-terms.pdf">booking terms</a>. Please <a href="/contact/">send us a message</a> if you're unsure you can climb.</Qa>
-            <Qa question="Where will I meet my Instructor?">We will send you an exact location once we receive a good forecast. We’ll get in touch a couple of days before your course.</Qa>
-            <Qa question="Can I bring my dog?">Your welcome to bring your dog on our private course as long as you will have enough people in your group to supervise your dog whilst you climb. Please let us know beforehand, as this affects where we will climb.</Qa>
-            <Qa question="May I bring spectators?">On our private courses spectators are welcome to join. Please let us know if your planning on brining a spectator.</Qa>
-            <Qa question="Can I bring my child's friends?">Yes, however, all legal parents and guardians of under-18's need to be present during the session.</Qa>
-            <Qa question="What if it rains?">We won't run sessions if the weather is too poor to climb. The Refund Policy is on our <a href="/resources/policies/booking-terms.pdf">Booking Terms</a>.</Qa>
-        </Accordian>
-    
+    </div>
+    <div class="seshpage-info private-info card">
+        <h2>Private Guiding</h2>
+        <div class="seshpage-info">
+            <Spec
+                loc="Swanage Or Portland"
+                age="Ages 7 & Up"
+                cost="From £160"
+            />
+            <p class="private-text bs-text">
+                On booking, you will have the choice of either climbing at
+                Portland or Swanage. Each of these locations have multiple
+                crags, we like to choose where the best conditions are to climb,
+                but if you have a preference of crag, just let us know.
+            </p>
 
+            <div class="seshpage-buttons">
+                <script
+                    is:inline
+                    src="https://assets.ticketinghub.com/checkout.js"
+                    data-widget="38de41bd-8ac6-4d43-b14a-1bbc49333c8f"
+                    data-ga-track-pageviews="false"
+                ></script>
+            </div>
+        </div>
+    </div>
+    <div class="seshpage-info open-info card">
+        <h2>Open Session</h2>
+        <div class="seshpage-info">
+            <Spec loc="Portland" age="Ages 12 & Up" cost="From £50" />
+            <p class="private-text bs-text">
+                These courses are great for meeting new people who also want to
+                start climbing. We run our open courses on the last Sunday of
+                every month at Portland. There are 6 spaces per instructor, so
+                you're guaranteed plenty of time on the rock!
+            </p>
+
+            <div class="seshpage-buttons">
+                <script
+                    is:inline
+                    src="https://assets.ticketinghub.com/checkout.js"
+                    data-widget="05471900-18fd-410c-895f-6e97b0f196c7"
+                    data-ga-track-pageviews="false"
+                ></script>
+            </div>
+        </div>
+    </div>
+
+    <div class="included card">
+        <div class="gear">
+            <img
+                class="gear-img"
+                src="/media/icons/helmet.svg"
+                alt="helmet icon"
+            />
+            <div class="gear-text">All Equipment Included</div>
+        </div>
+        <div class="divide"></div>
+        <div class="bring">
+            <h4 class="bring-title">You'll Need:</h4>
+            <ul>
+                <li>A sturdy pair of shoes</li>
+                <li>Lunch, snacks & water</li>
+                <li>A jumper and waterproof</li>
+            </ul>
+        </div>
+    </div>
+
+    <Accordian>
+        <Qa question="Who can climb?">
+            With roped climbing, climbers need to be aged 9+ and can fit a
+            helmet and harness. Equipment sizes can be found on the <a
+                href="/resources/policies/booking-terms.pdf">booking terms</a
+            >. Please <a href="/contact/">send us a message</a> if you're unsure
+            you can climb.
+        </Qa>
+        <Qa question="Where will I meet my Instructor?">
+            We will send you an exact location once we receive a good forecast.
+            We’ll get in touch a couple of days before your course.
+        </Qa>
+        <Qa question="Can I bring my dog?">
+            Your welcome to bring your dog on our private course as long as you
+            will have enough people in your group to supervise your dog whilst
+            you climb. Please let us know beforehand, as this affects where we
+            will climb.
+        </Qa>
+        <Qa question="May I bring spectators?">
+            On our private courses spectators are welcome to join. Please let us
+            know if your planning on brining a spectator.
+        </Qa>
+        <Qa question="Can I bring my child's friends?">
+            Yes, however, all legal parents and guardians of under-18's need to
+            be present during the session.
+        </Qa>
+        <Qa question="What if it rains?">
+            We won't run sessions if the weather is too poor to climb. The
+            Refund Policy is on our <a
+                href="/resources/policies/booking-terms.pdf">Booking Terms</a
+            >.
+        </Qa>
+    </Accordian>
 </Frame>

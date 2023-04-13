@@ -1,111 +1,104 @@
 ---
+import { Picture } from "@astrojs/image/components";
+
 import Frame from "../../layouts/frame.astro";
 import Spec from "../../components/parts/Spec.astro";
 import "./courses.scss";
+
+import belay from "../../images/learn-belay.jpg";
+import taster from "../../images/taster.jpg";
+import group from "../../images/groups.jpg";
 ---
 
 <Frame
   title={" - Courses"}
   description={"We run a variety of climbing courses for all abilites. We specialise our course in Dorset, however, "}
 >
-<div class="card" id="L2B">
-  <h2>Learn to Belay</h2>
-  <div class="section">
-    <img
-    src="/media/L2B.jpg"
-    alt="A beginner learning to tie a rope with the instructor"
-    class="img-50 section-img"
+  <div class="card grid-1" id="L2B">
+    <h2>Learn to Belay</h2>
+    <Picture
+      src={belay}
+      widths={[300, 600, 1200]}
+      sizes="(max-width: 768px) 85%, 300px"
+      alt="A young woman climbing up the side of a 10m wall"
+      class="img-cover"
     />
-    <div class="info">
-      <Spec loc="Swanage & Portland" duration="8 Hours" group="Upto 6 climbers"/>
-      <p>
-        These courses are ideal for beginners to roped climbing. You’ll learn
-        how to tie knots, belay and climb.
-      </p>
-      
-      <a href="/courses/learn-to-belay/" class="btn">Book Here</a>
-    </div>
+    <Spec loc="Swanage & Portland" duration="8 Hours" group="Upto 6 climbers" />
+    <p>
+      These courses are ideal for beginners to roped climbing. You’ll learn how
+      to tie knots, belay and climb.
+    </p>
+    <a href="/courses/learn-to-belay/" class="btn">Book Here</a>
   </div>
-</div>
 
-<div class="card" id="taster">
+  <div class="card grid-1" id="taster">
     <h2>Taster Session</h2>
-    <div class="section">
-      <div class="info">
-        <Spec loc="Portland" duration="3 hours" group="Upto 6 Climbers"></Spec>
-          <p>
-            In this session, you get to experience climbing on Portland rock. It's
-            perfect for beginners that want a small insight of climbing outdoors.
-          </p>
-          <a href="/courses/taster-session" class="btn">Book Here</a>
-        </div>
-        <img
-        src="/media/taster-session.jpg"
-        alt="A group watching a climber start his climb, one of the members is belaying him whilst the others are learning"
-        class="img-50 section-img"
-        />
-      </div>
+    <Picture
+      src={taster}
+      widths={[300, 600, 1200]}
+      sizes="(max-width: 768px) 85%, 300px"
+      alt="Someone at the top of the wall communicating to his belayer"
+      class="img-cover"
+    />
+    <Spec loc="Portland" duration="3 hours" group="Upto 6 Climbers" />
+    <p>
+      In this session, you get to experience climbing on Portland rock. It's
+      perfect for beginners that want a small insight of climbing outdoors.
+    </p>
+    <a href="/courses/taster-session" class="btn">Book Here</a>
   </div>
-  
-  <div class="card" id="coaching">
+
+  <div class="card grid-1" id="coaching">
     <h2>London Coaching</h2>
-    <div class="section">
+    <picture>
       <img
-      src="/media/coaching.jpg"
-      alt="Hayden is climbing on an overhanging bouldering wall, using just his finger tips on the small crimps."
-      class="img-50 section-img"
+        src="/media/coaching.jpg"
+        alt="Hayden is climbing on an overhanging bouldering wall, using just his finger tips on the small crimps."
       />
-      <div class="info">
-<Spec cost="From £33/hour"/>
-      <p>
-        Coaching is now available at Vauxwall East. Hayden has been coaching
-        climbing for 5 years and is a qualified coach. If you're looking to
-        learn technique or push your grade, he’d love to help.
-      </p>
-      <a href="/courses/coaching/" class="btn">Book Here</a>
-    </div>
+    </picture>
+    <Spec cost="From £33/hour" />
+    <p>
+      Coaching is now available at Vauxwall East. Hayden has been coaching
+      climbing for 5 years and is a qualified coach. If you're looking to learn
+      technique or push your grade, he’d love to help.
+    </p>
+    <a href="/courses/coaching/" class="btn">Book Here</a>
   </div>
-</div>
 
-<div class="card" id="peak">
-  <h2>Peak District</h2>
-  <img
-  src="/media/stanage-popular.jpg"
-  alt="Hayden sat in his harness, suspended next to the rock"
-  class="peak-img"
-  />
-  <div class="section-block">
-    <div class="info">
-        <Spec loc="Hathersage" duration="2 Days" group="Upto 6 Climbers"/>
-        <p>
-          The Peak District is the home of gritstone climbing and it’s epic
-          scenery. We’ll climb Stanage Edge and another local crag near
-          Hathersage.
-        </p>
-        
-        <a href="/courses/peak-district/" class="btn">Book Here</a>
-      </div>
-    </div>
+  <div class="card" id="peak">
+    <h2>Peak District</h2>
+    <picture>
+      <img
+        src="/media/stanage-popular.jpg"
+        alt="A panoramic view of Stange Popular, a ridge made up of gritstone and fallen blocks"
+        class="peak-img"
+      />
+    </picture>
+    <Spec loc="Hathersage" duration="2 Days" group="Upto 6 Climbers" />
+    <p>
+      The Peak District is the home of gritstone climbing and it’s epic scenery.
+      We’ll climb Stanage Edge and another local crag near Hathersage.
+    </p>
+
+    <a href="/courses/peak-district/" class="btn">Book Here</a>
   </div>
-  
-  <div class="card" id="group">
+
+  <div class="card grid-1" id="group">
     <h2>Group Bookings</h2>
-    <div class="section">
-      <div class="info">
-        <Spec duration="8 Hours" group="Upto 12 Climbers"/>
-        
-        <p>
-          Whether you’re looking for a team building day, or a memorable
-          experience, we have something for you.
-        </p>
+    <Picture
+      src={group}
+      widths={[300, 600, 1200]}
+      sizes="(max-width: 768px) 85%, 300px"
+      alt="2 people having a snack break after climbing, the are looking out over Portland and the south coast."
+      class="img-cover"
+    />
+    <Spec duration="8 Hours" group="Upto 12 Climbers" />
 
-          <a href="/contact/" class="btn">Contact Us</a>
-      </div>
-      <img
-        src="/media/groups.jpg"
-        alt="Hayden sat in his harness, suspended next to the rock"
-        class="img-50 section-img"
-      />
-    </div>
+    <p>
+      Whether you’re looking for a team building day, or a memorable experience,
+      we have something for you.
+    </p>
+
+    <a href="/contact/" class="btn">Contact Us</a>
   </div>
 </Frame>

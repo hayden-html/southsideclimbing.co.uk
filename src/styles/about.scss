@@ -1,59 +1,39 @@
-.story,
-.hayden {
-    &-img {
-        &-mob {
-            display: none;
-        }
-    }
-}
-
 #hayden {
-
-
     .hayden-quals {
         h3 {
             text-align: center;
             font-size: 1.7em;
+            margin-bottom: 5px;
         }
 
         &-list {
             font-size: 1.2em;
-            display: flex;
-            justify-content: space-evenly;
+            display: block;
+            text-align: center;
 
             li {
-                margin: 5px 0 0;
+                margin-bottom: 5px;
             }
 
-            
-            @media(max-width: 800px) {
-                display: block;
-                text-align: center;
-                li {
-                    list-style: none;
+            ul {
+                padding: 0;
+                list-style-type: none;
+            }
+
+            @media(min-width: 768px) {
+                display: flex;
+                justify-content: space-evenly;
+
+                ul {
+                    list-style-type: disc;
                 }
             }
         }
+
         p {
             font-size: 1.2em;
             text-align: center;
         }
 
-        }
     }
-
-    @media(max-width: 800px) {
-
-        .story,
-        .hayden {
-            &-img {
-                display: none;
-
-                &-mob {
-                    display: block;
-                    width: 90%;
-                    margin: 0 auto 5px;
-                }
-            }
-        }
-    }
+}

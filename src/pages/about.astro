@@ -1,57 +1,51 @@
 ---
+import { Picture } from "@astrojs/image/components";
 import Frame from "../layouts/frame.astro";
 import "../styles/about.scss";
+
+import battleship from "../images/about-battleship.jpg";
+import hayden from "../images/meet-hayden.jpg";
 ---
 
 <Frame
   title="- About"
   description="Southside Climbing is based in Dorset. Our professional instructor, Hayden has been climbing for 10 years. He enjoys bouldering, sport climbing, and trad."
 >
-  <div class="card" id="story">
-    <div class="section">
-      <div class="info">
-        <h1>About Us</h1>
-        <img
-          src="/media/hayden-blacknor-mob.jpg"
-          alt="Hayden, in shorts and a maroon t-shirt. He stopped to look behind him whilst walking past a boulder"
-          class="img-mob"
-        />
-        <p>
-          At Southside Climbing we offer sessions full of adventure and expertise. We host our climbing activities in Dorset, home of Swanage, Lulworth & the Isle of Portland.
-        </p>
-      </div>
-      <img
-        src="/media/hayden-blacknor.jpg"
-        alt="Hayden, in shorts and a maroon t-shirt. He stopped to look behind him whilst walking past a boulder"
-        class="img-desk"
-      />
-    </div>
+  <div class="card grid-1" id="story">
+    <h1>About Us</h1>
+    <Picture
+      src={battleship}
+      widths={[300, 600, 1200]}
+      sizes="(max-width: 768px) 85%, 300px"
+      alt="The block of battleship backcliff, 10 meters in height"
+      class="img-cover"
+    />
+    <p>
+      At Southside Climbing we offer sessions full of adventure and expertise.
+      We host our climbing activities in Dorset, home of Swanage, Lulworth & the
+      Isle of Portland.
+    </p>
   </div>
 
   <div class="card" id="hayden">
-      <div class="section">
-        <img
-          src="/media/hayden-proj.jpg"
-          alt="Hayden is climbing an overhanging wall indoors."
-          class="img-desk"
-        />
-        <div class="section-text">
-          <h2>Meet Hayden</h2>
-          <img
-            src="/media/hayden-proj-mob.jpg"
-            alt="Hayden is climbing an overhanging wall indoors."
-            class="img-mob"
-          />
-          <p>
-            Hayden is our instructor who has been instructing climbing for over
-            the last 5 years. He discovered climbing through his local climbing
-            centre when he was 15. Since then he has climbed all over the country
-            and has gained multiple climbing qualifications.
-          </p>
-        </div>
-      </div>
+    <div class="grid-1">
+      <h2>Meet Hayden</h2>
+      <Picture
+        src={hayden}
+        widths={[300, 600, 1200]}
+        sizes="(max-width: 768px) 85%, 300px"
+        alt="Hayden is in his mid twentys, has tanned olive skin and terrible t-shirt tan lines."
+        class="img-cover"
+      />
+      <p>
+        Hayden is our instructor who has been instructing climbing for over the
+        last 5 years. He discovered climbing through his local climbing centre
+        when he was 15. Since then he has climbed all over the country and has
+        gained multiple climbing qualifications.
+      </p>
+    </div>
 
-      <div class="hayden-quals">
+    <div class="hayden-quals">
       <h3>Hayden's Qualifications</h3>
       <div class="hayden-quals-list">
         <ul>
@@ -65,7 +59,7 @@ import "../styles/about.scss";
           <li>Safeguarding in Sport</li>
         </ul>
       </div>
-      <p>+ Insurance</p>
+      <p>+ Climbing Instructor Insurance</p>
     </div>
   </div>
 </Frame>

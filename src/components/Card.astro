@@ -1,0 +1,109 @@
+---
+import Spec from "./parts/Spec.astro";
+---
+
+<div class="card" id="courses">
+  <h2>Our courses</h2>
+  
+  <picture>
+    <img
+      srcset="/media/gearing-up.jpg 800w, /media/belay.jpg 2000w"
+      alt="Myself gearing up, and passing karabiners to sam"
+    />
+  </picture>
+  <Spec class="spec-grid" loc="Swanage & Portland" duration="8 Hours" group="Upto 6 climbers" />
+  <p>
+    We host a range of courses at Swanage and Portland. The sessions are ideal
+    for beginners that want to learn rope climbing, but also for the adventure
+    seekers.
+  </p>
+  <a class="btn" href="./courses">See Courses</a>
+</div>
+
+<style lang="scss">
+  // .card {
+  //   background-color: white;
+  //   margin: 0px auto 20px;
+  //   box-shadow: 0px 2px 10px #9f9f9f;
+  //   width: clamp(310px, 85%, 660px);
+  //   padding: 8px 10px 5px;
+
+  //   display: block;
+
+  //   h1,
+  //   h2 {
+  //     font-size: 35px;
+  //     margin: 0 0 5px;
+  //     font-weight: 500;
+  //     color: #19a3de;
+  //   }
+
+  //   picture {
+  //     img {
+  //       display: block;
+  //       margin: 0 auto 8px;
+  //       width: min(405px, 85%);
+  //     }
+  //   }
+
+  //   p {
+  //     width: clamp(290px, 98%, 665px);
+  //     font-size: 1.4em;
+  //     margin-bottom: 5px;
+  //     width: 95%;
+  //   }
+
+  //   .btn {
+  //     height: min-content;
+  //   }
+  // }
+
+    @media (min-width: 800px) {
+      .card {
+      box-shadow: 0px 5px 10px rgb(159, 159, 159);
+      width: 720px;
+      padding: 5px 20px 15px;
+
+      // display: grid;
+      // grid-template-columns: 55% 45%;
+      // grid-auto-rows: auto;
+      // grid-template-areas: none;
+      // grid-auto-flow: dense;
+    //   grid-template-areas: "title picture" "spec picture" "p picture" "button picture";
+
+      h1,
+      h2 {
+        margin: 5px 0 0;
+        font-size: 45px;
+        grid-column: 1 / 2;
+        grid-row: auto;
+      }
+
+      picture {
+        grid-column: 2 / 3;
+        grid-row: 1 / 5;
+        img {
+          max-width: 250px;
+          display: block;
+          margin: 5% auto;
+                }
+      }
+
+      .spec-grid {
+        grid-column: 1 / 2;
+        grid-row: auto;
+      }
+
+      p {
+        grid-column: 1 / 2;
+        grid-row: auto;
+
+
+      }
+      .btn {
+        grid-column: 1 / 2;
+        grid-row: auto;
+      }
+    }
+  }
+</style>

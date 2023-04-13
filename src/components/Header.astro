@@ -1,225 +1,162 @@
 ---
-
 ---
 
 <nav>
   <a class="title" href="/">
-    <img src="/media/logo.svg" alt="An ocean wave with a pink sky" class="logo" />
-    <img src="/media/logo-text-white.svg" alt="Southside Climbing" class="logo-title" />
+    <img
+      src="/media/logo.svg"
+      alt="An ocean wave with a pink sky"
+      class="logo"
+    />
+    <img
+      src="/media/logo-text-white.svg"
+      alt="Southside Climbing"
+      class="logo-title"
+    />
   </a>
 
   <div class="links">
     <a href="/about/" class="links-a">About</a>
+    <!-- <a href="/blog/" class="links-a">Blog</a> -->
     <a href="/courses/" class="links-a">Courses</a>
     <a href="/contact/" class="links-a">Contact</a>
   </div>
-  <div class="burger" id="burger">
-    <img src="/media/icons/burger.svg" alt="burger menu" />
-  </div>
+  <img
+    src="/media/icons/burger.svg"
+    alt="burger menu"
+    class="burger"
+    id="burger"
+  />
   <div class="mob-menu none">
-    <div class="mob-menu-background"></div>
     <div class="mob-menu-list">
-      <div class="close" id="close">
-        <img src="/media/icons/close.svg" alt="cross to close menu" />
-      </div>
+        <img src="/media/icons/close.svg" alt="cross to close menu" class="close"/>
       <a href="/about/" class="mob-menu-list-item links-a">About</a>
       <a href="/courses/" class="mob-menu-list-item links-a">Courses</a>
       <a href="/contact/" class="mob-menu-list-item links-a">Contact</a>
       <div class="mob-menu-socials socials">
-                    <a href="https://www.facebook.com/southsideclimbing/" class="socials-fb"><img src= "/media/icons/facebook.svg"
-                        alt="facebook logo"></a>
-                <a href="https://www.instagram.com/southsideclimbing/" class="socials-insta"><img src="/media/icons/instagram.svg"
-                        alt="facebook logo"></a>
-                </div>
+        <a href="https://www.facebook.com/southsideclimbing/" class="socials-fb"
+          ><img src="/media/icons/facebook.svg" alt="facebook logo" /></a
+        >
+        <a
+          href="https://www.instagram.com/southsideclimbing/"
+          class="socials-insta"
+          ><img src="/media/icons/instagram.svg" alt="facebook logo" /></a
+        >
+      </div>
     </div>
   </div>
 </nav>
 
 <script lang="js">
-  function openMenu(){
-		const mobMenu = document.querySelector('.mob-menu');
-		// console.log('open')
-		mobMenu.classList.remove('none');
-	}
-	
-	document.getElementById('burger').addEventListener('click', openMenu);
-	document.getElementById('close').addEventListener('click', closeMenu);
+  const mobMenu = document.querySelector(".mob-menu");
 
-  const background = document.querySelector('.mob-menu-background');
+  function openMenu() {
+    mobMenu.classList.remove("none");
+  }
+  
+  document.getElementById("burger").addEventListener("click", openMenu);
 
-function closeMenu(){
-    console.log('closed')
-    const mobMenu = document.querySelector('.mob-menu');
-    mobMenu?.classList.add('none');
-}
-
-background.addEventListener('click', () => closeMenu());
-
-
+  mobMenu.addEventListener('click', e => {
+    let list = e.target.classList;
+    if(list.contains('mob-menu') || list.contains('close')){
+      mobMenu?.classList.add("none");
+    }
+  })
 </script>
 <style lang="scss">
   nav {
     background-color: #2eada4;
-    padding: 8px 20px;
     display: flex;
     justify-content: space-between;
-    height: fit-content;
-    max-width: 100%;
+    width: 100%;
+    min-width: 320px;
+    padding: clamp(8px, 1.5vw, 20px);
     box-sizing: border-box;
+  }
 
     .title {
       display: flex;
-
       .logo {
-        height: 45px;
-        margin: auto 10px auto 0;
-      }
-
-      .logo-title {
-        height: 30px;
-        margin: auto 0;
+        height: auto;
+        width: clamp(32px, 7vw, 45px);
+        margin-right: clamp(5px, 1vw, 15px);
+        &-title {
+          height: auto;
+          width: clamp(210px, 50vw, 325px);
+        }
       }
     }
 
+    .links {
+      display: none;
+      &-a {
+        font-family: "Noto Sans", sans-serif;
+        font-size: 32px;
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 0 10px;
+      }
+    }
+
+    .burger {
+      width: clamp(30px, 7vw, 40px);
+      margin: auto 0;
+    }
+
+    .mob-menu {
+      background-color: #0728266e;
+      z-index: 1;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      &-list {
+        background-color: #16867e;
+        margin-left: auto;
+        box-sizing: border-box;
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        width: 210px;
+        height: 100svh;
+
+        .close {
+          cursor: pointer;
+          margin-left: auto;
+          width: 30px;
+        }
+
+        &-item {
+          font-size: 2.2em;
+        }
+      }
+
+      &-socials {
+        margin-top: auto;
+        display: flex;
+
+        a {
+          max-height: 40px;
+          width: 40px;
+          margin: 10px;
+        }
+      }
+    }
+
+  @media (min-width: 930px) {
     .burger {
       display: none;
     }
 
     .links {
-      height: 70px;
       display: flex;
-
       &-a {
-        font-family: "Noto Sans", sans-serif;
-        font-size: 1.8em;
-        color: #ffffff;
-        text-decoration: none;
+        font-size: 30px;
         margin: auto 10px auto 20px;
       }
     }
-
-    .mob-menu {
-      display: none;
-    }
   }
-
-  @media (max-width: 1000px) {
-    nav {
-      .title {
-        .logo {
-          color: #01339f;
-          // }
-        }
-      }
-
-      .burger {
-        display: block;
-        margin: auto 0;
-      }
-
-      .links {
-        display: none;
-        &-a {
-          margin: 0 0 10px;
-        }
-      }
-
-      .mob-menu {
-        z-index: 2;
-        position: fixed;
-        display: flex;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-
-        &-background {
-          background-color: #0728266e;
-          width: 100vw;
-          display: block;
-        }
-
-        &-list {
-          background-color: #16867e;
-          // right: 0;
-          box-sizing: border-box;
-          padding: 25px 25px;
-          display: flex;
-          flex-direction: column;
-          min-width: 240px;
-          height: 100%;
-
-          .close {
-            margin-left: auto;
-            width: min-content;
-            img {
-              height: 35px;
-            }
-          }
-
-          &-item {
-            font-size: 2.2em;
-          }
-        }
-
-        &-socials {
-          margin-top: auto;
-        }
-      }
-    }
-  }
-  @media (max-width: 600px) {
-    nav {
-        .title {
-            .logo {
-                width: 50px;
-                
-                &-title {
-                    height: 30px;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 550px) {
-
-
-    nav {
-      padding: 8px 10px;
-        .title {
-            .logo {
-                width: 40px;
-                margin-right: 7px;
-                
-                &-title {
-                    height: 21px;
-                }
-            }
-        }
-
-        .burger {
-            height: fit-content;
-
-            img {
-                height: 25px;
-                margin-right: 10px;
-            }
-        }
-
-        .mob-menu {
-            &-list {
-                &-item {
-                    font-size: 2em;
-                }
-
-            }
-        }
-
-        .close {
-            margin-bottom: 5px;
-        }
-    }
-
-}
 </style>

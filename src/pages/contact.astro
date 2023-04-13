@@ -1,20 +1,78 @@
 ---
-import Frame from '../layouts/frame.astro';
-import "../styles/contact.scss";
+import Frame from "../layouts/frame.astro";
 import "../styles/global.scss";
 
-import ContactForm from '../components/ContactForm.astro';
-import Insta from '../components/Insta.astro';
+import ContactForm from "../components/ContactForm.astro";
+import Insta from "../components/Insta.astro";
 ---
 
-<Frame title={' - Contact'} description={'Please get in touch if you wish to enquire'}>
-    <ContactForm />
-    <div class="card details">
-        <h1>Our Details</h1>
-        <div class="options">
-            <div class="tel"><img src="/media/icons/whatsapp.svg" class="tel-img" alt="whatsapp"><a href="tel:+447767048893" class="details-a tel-text ">+44 7707 162505</a></div>
-            <div class="email"><img src="/media/icons/email.svg" alt="email" class="email-img"><a href="mailto:hayden@southsideclimbing.co.uk" class="details-a email-text">hayden@southsideclimbing.co.uk</a></div>
-        </div>
+<Frame
+  title={" - Contact"}
+  description={"Please get in touch if you wish to enquire"}
+>
+  <ContactForm />
+  <div class="card details">
+    <h1>Our Details</h1>
+    <div class="options">
+      <div class="tel">
+        <img src="/media/icons/whatsapp.svg" class="tel-img" alt="whatsapp" /><a
+          href="tel:+447767048893"
+          class="details-a tel-text">+44 7707 162505</a
+        >
+      </div>
+      <div class="email">
+        <img src="/media/icons/email.svg" alt="email" class="email-img" /><a
+          href="mailto:hayden@southsideclimbing.co.uk"
+          class="details-a email-text">hayden@southsideclimbing.co.uk</a
+        >
+      </div>
     </div>
-    <Insta/>
+  </div>
+  <Insta />
 </Frame>
+
+<style lang="scss">
+  .details {
+    &-a {
+      font-size: 16px;
+    }
+    .tel,
+    .email {
+      margin-bottom: 15px;
+      display: flex;
+      &-img {
+        width: 30px;
+        margin: 0 5px 0 0;
+      }
+      &-text {
+        align-self: center;
+      }
+    }
+  }
+
+  @media (min-width: 380px) {
+    .details {
+      &-a {
+        font-size: 1.1em;
+      }
+      .tel,
+      .email {
+        &-img {
+          width: clamp(35px, 4.5vw, 50px);
+          margin: 0 2% 0 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 550px) {
+    .options {
+      margin: 5px 0 0 5px;
+    }
+    .details {
+      &-a {
+        font-size: 1.3em;
+      }
+    }
+  }
+</style>
