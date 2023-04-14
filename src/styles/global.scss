@@ -3,6 +3,7 @@
     font-weight: 700;
     src: url('/fonts/nunito-variablefont_wght-webfont.woff2') format('woff2'),
         url('/fonts/nunito-variablefont_wght-webfont.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
     font-weight: 500;
     src: url('/fonts/notosans-medium-webfont.woff2') format('woff2'),
         url('/fonts/notosans-medium-webfont.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
@@ -17,6 +19,7 @@
     font-weight: 400;
     src: url('/fonts/roboto-regular-webfont.woff2') format('woff2'),
         url('/fonts/roboto-regular-webfont.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
@@ -24,6 +27,7 @@
     font-weight: 400;
     src: url('/fonts/varelaround-regular-webfont.woff2') format('woff2'),
         url('/fonts/varelaround-regular-webfont.woff') format('woff');
+    font-display: swap;
 }
 
 * {

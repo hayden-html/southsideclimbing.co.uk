@@ -9,7 +9,7 @@ import insta3 from "../images/insta-3.jpg";
   <Picture
     src={tying}
     widths={[300, 600]}
-    sizes="min(330px,30vw)"
+    sizes="min(300px,30vw)"
     aspectRatio="1:1"
     alt="A man rethreading a figure of 8 through his harness"
     class="slide s1"
@@ -17,7 +17,7 @@ import insta3 from "../images/insta-3.jpg";
   <Picture
     src={insta2}
     widths={[300, 600]}
-    sizes="min(330px,30vw)"
+    sizes="min(300px,30vw)"
     aspectRatio="1:1"
     alt="A woman on a the crux of a route with her foot placed at waist height"
     class="slide s2"
@@ -26,7 +26,7 @@ import insta3 from "../images/insta-3.jpg";
     src={insta3}
     widths={[300, 600]}
     aspectRatio="1:1"
-    sizes="min(330px,30vw)"
+    sizes="min(300px,30vw)"
     alt="A man half way up a route in the shade with the sunlight just about his head"
     class="slide s3"
   />
@@ -37,28 +37,20 @@ import insta3 from "../images/insta-3.jpg";
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
-    .s1,
     .s3 {
       display: none;
     }
 
     .slide {
       margin: 0 3px;
+      width: clamp(150px, 45vw, 250px);
     }
-    @media (min-width: 365px) {
+    @media (min-width: 555px) {
+      margin-bottom: 20px;
+      .slide {
+        width: clamp(150px, 30vw, 300px);
+      }
       .s3 {
-        display: block;
-      }
-      .slide {
-        width: clamp(170px, 45%, 250px);
-      }
-    }
-    @media (min-width: 768px) {
-      margin: 0 auto 20px;
-      .slide {
-        width: min(330px, 30vw);
-      }
-      .s1 {
         display: block;
       }
     }
