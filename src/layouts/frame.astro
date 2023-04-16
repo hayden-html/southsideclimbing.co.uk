@@ -1,17 +1,16 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 const { title, description } = Astro.props;
-
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<meta name="ExtraHead"/>
+		<meta name="ExtraHead" />
 	</head>
 	<body>
 		<Header />
@@ -19,13 +18,11 @@ const { title, description } = Astro.props;
 			<slot />
 		</main>
 		<Footer />
-	</body>
+	</body><style lang="scss">
+		main {
+			min-height: calc(100svh - 61px - 108.4px - 40px);
+			padding: 20px 0;
+			background-color: #f2f2f2;
+		}
+	</style>
 </html>
-
-<style lang="scss">
-	main {
-		min-height: calc(100svh - 61px - 108.4px - 40px);
-		padding: 20px 0;
-		background-color: #F2F2F2;
-	}
-</style>
