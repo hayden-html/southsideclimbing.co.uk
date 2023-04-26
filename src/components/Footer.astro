@@ -1,56 +1,55 @@
 ---
-
 ---
 
 <footer>
-	<div class="links">
-		<a href="/resources/policies/privacy-policy.pdf">Privacy Policy</a>
-		<a href="/resources/policies/booking-terms.pdf">Booking Terms</a>
-		<!-- <p id="open-cookies">Cookies Settings</p> -->
-	</div>
-	<div class="socials">
-		<a href="https://www.facebook.com/southsideclimbing/" class="socials-fb"><img src="/media/icons/facebook.svg"
-				alt="facebook logo"></a>
-		<a href="https://www.instagram.com/southsideclimbing/" class="socials-insta"><img src="/media/icons/instagram.svg"
-				alt="facebook logo"></a>
-	</div>
+    <div class="links">
+        <a href="/resources/policies/privacy-policy.pdf">Privacy Policy</a>
+        <a href="/resources/policies/booking-terms.pdf">Booking Terms</a>
+        <!-- <p id="open-cookies">Cookies Settings</p> -->
+    </div>
+    <div class="socials">
+        <a href="https://www.facebook.com/southsideclimbing/" class="socials-fb"
+            ><img src="/media/icons/facebook.svg" alt="facebook logo" /></a
+        >
+        <a
+            href="https://www.instagram.com/southsideclimbing/"
+            class="socials-insta"
+            ><img src="/media/icons/instagram.svg" alt="facebook logo" /></a
+        >
+    </div>
 </footer>
 
 <style lang="scss">
-	footer {
-    background-color: #16867e;
-    // height: 80px;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-between;
+    footer {
+        background-color: #16867e;
+        // height: 80px;
+        padding: 30px 100px;
+        display: flex;
+        justify-content: space-between;
 
-    a,
-    p {
-        text-decoration: none;
-        color: rgb(246, 246, 246);
-        display: block;
-        width: max-content;
-        margin: 10px 0;
-        cursor: pointer;
+        a,
+        p {
+            text-decoration: none;
+            color: rgb(246, 246, 246);
+            display: block;
+            width: max-content;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+    }
+    .socials {
+        display: flex;
+
+        a {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+        }
     }
 
-
-}
-.socials {
-    display: flex;
-
-    a {
-        max-height: 40px;
-        width: 40px;
-        margin: 10px;
+    @media (max-width: 1000px) {
+        footer {
+            padding: 20px;
+        }
     }
-}
-
-@media (max-width: 1000px) {
-	footer {
-		padding: 20px;
-	}
-}
-
-
 </style>

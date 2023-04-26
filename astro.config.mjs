@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 import image from "@astrojs/image";
 
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://southsideclimbing.co.uk',
   integrations: [mdx(), sitemap(), image({
     serviceEntryPoint: '@astrojs/image/sharp'
   })]

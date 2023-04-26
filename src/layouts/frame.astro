@@ -11,6 +11,7 @@ const { title, description } = Astro.props;
 	<head>
 		<BaseHead title={title} description={description} />
 		<meta name="ExtraHead" />
+		<link rel="sitemap" href="/sitemap-index.xml"
 	</head>
 	<body>
 		<Header />
@@ -18,11 +19,5 @@ const { title, description } = Astro.props;
 			<slot />
 		</main>
 		<Footer />
-	</body><style lang="scss">
-		main {
-			min-height: calc(100svh - 61px - 108.4px - 40px);
-			padding: 20px 0;
-			background-color: #f2f2f2;
-		}
-	</style>
+	</body>
 </html>

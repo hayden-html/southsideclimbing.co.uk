@@ -29,7 +29,11 @@
   />
   <div class="mob-menu none">
     <div class="mob-menu-list">
-        <img src="/media/icons/close.svg" alt="cross to close menu" class="close"/>
+      <img
+        src="/media/icons/close.svg"
+        alt="cross to close menu"
+        class="close"
+      />
       <a href="/about/" class="mob-menu-list-item links-a">About</a>
       <a href="/courses/" class="mob-menu-list-item links-a">Courses</a>
       <a href="/contact/" class="mob-menu-list-item links-a">Contact</a>
@@ -53,15 +57,15 @@
   function openMenu() {
     mobMenu.classList.remove("none");
   }
-  
+
   document.getElementById("burger").addEventListener("click", openMenu);
 
-  mobMenu.addEventListener('click', e => {
+  mobMenu.addEventListener("click", (e) => {
     let list = e.target.classList;
-    if(list.contains('mob-menu') || list.contains('close')){
+    if (list.contains("mob-menu") || list.contains("close")) {
       mobMenu?.classList.add("none");
     }
-  })
+  });
 </script>
 <style lang="scss">
   nav {
@@ -74,77 +78,78 @@
     box-sizing: border-box;
   }
 
-    .title {
+  .title {
+    display: flex;
+    .logo {
+      width: clamp(32px, 7vw, 45px);
+      aspect-ratio: 1 / 1;
+      margin-right: clamp(5px, 1vw, 15px);
+      &-title {
+        width: clamp(210px, 50vw, 325px);
+        aspect-ratio: 325 / 45;
+      }
+    }
+  }
+
+  .links {
+    display: none;
+    &-a {
+      font-family: "Noto Sans", sans-serif;
+      font-size: 32px;
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 0 10px;
+    }
+  }
+
+  .burger {
+    width: clamp(30px, 7vw, 40px);
+    aspect-ratio: 30 / 24;
+    margin: auto 0;
+  }
+
+  .mob-menu {
+    background-color: #0728266e;
+    z-index: 1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &-list {
+      background-color: #16867e;
+      margin-left: auto;
+      box-sizing: border-box;
+      padding: 18px;
       display: flex;
-      .logo {
-        height: auto;
-        width: clamp(32px, 7vw, 45px);
-        margin-right: clamp(5px, 1vw, 15px);
-        &-title {
-          height: auto;
-          width: clamp(210px, 50vw, 325px);
-        }
-      }
-    }
+      flex-direction: column;
+      width: 210px;
+      height: 100svh;
 
-    .links {
-      display: none;
-      &-a {
-        font-family: "Noto Sans", sans-serif;
-        font-size: 32px;
-        color: #ffffff;
-        text-decoration: none;
-        margin: 0 0 10px;
-      }
-    }
-
-    .burger {
-      width: clamp(30px, 7vw, 40px);
-      margin: auto 0;
-    }
-
-    .mob-menu {
-      background-color: #0728266e;
-      z-index: 1;
-      position: fixed;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-
-      &-list {
-        background-color: #16867e;
+      .close {
+        cursor: pointer;
         margin-left: auto;
-        box-sizing: border-box;
-        padding: 18px;
-        display: flex;
-        flex-direction: column;
-        width: 210px;
-        height: 100svh;
-
-        .close {
-          cursor: pointer;
-          margin-left: auto;
-          width: 30px;
-        }
-
-        &-item {
-          font-size: 2.2em;
-        }
+        width: 30px;
+        aspect-ratio: 1 / 1;
       }
 
-      &-socials {
-        margin-top: auto;
-        display: flex;
-
-        a {
-          max-height: 40px;
-          width: 40px;
-          margin: 10px;
-        }
+      &-item {
+        font-size: 2.2em;
       }
     }
+
+    &-socials {
+      margin-top: auto;
+      display: flex;
+
+      a img {
+        width: 40px;
+        margin: 10px;
+      }
+    }
+  }
 
   @media (min-width: 930px) {
     .burger {
