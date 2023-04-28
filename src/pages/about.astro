@@ -5,11 +5,12 @@ import "../styles/about.scss";
 
 import battleship from "../images/about-battleship.jpg";
 import hayden from "../images/meet-hayden.jpg";
+import values from "../images/values.jpg";
 ---
 
 <Frame
   title="- About"
-  description="Southside Climbing is based in Dorset. Our professional instructor, Hayden has been climbing for 10 years. He enjoys bouldering, sport climbing, and trad."
+  description="At Southside Climbing, It's our mission to offer quality climbing sessions and take your skills to the next level. Our instructors are enthusiastic about getting beginners climbing."
 >
   <div class="card grid-1" id="story">
     <h1>About Us</h1>
@@ -46,21 +47,71 @@ import hayden from "../images/meet-hayden.jpg";
       </p>
     </div>
 
-    <div class="hayden-quals">
+    <div class="list">
       <h3>Hayden's Qualifications</h3>
-      <div class="hayden-quals-list">
-        <ul>
-          <li>Rock Climbing Instructor</li>
-          <li>Climbing Wall Instructor</li>
-          <li>Foundation Coach</li>
-        </ul>
-        <ul>
-          <li>RSD Roped Route-Setter</li>
-          <li>Outdoor First Aid - 16 Hours</li>
-          <li>Safeguarding in Sport</li>
-        </ul>
-      </div>
+      <ul>
+        <li>Rock Climbing Instructor</li>
+        <li>Climbing Wall Instructor</li>
+        <li>Foundation Coach</li>
+        <li>RSD Roped Route-Setter</li>
+        <li>Outdoor First Aid</li>
+        <li>Safeguarding in Sport</li>
+      </ul>
       <p>+ Climbing Instructor Insurance</p>
+    </div>
+  </div>
+
+  <div class="card grid-1" id="values">
+    <h2>Our Values</h2>
+    <Picture
+      src={values}
+      widths={[300, 600, 1200]}
+      sizes="(max-width: 768px) 85%, 300px"
+      alt="Hayden is in his mid twentys, has tanned olive skin and terrible t-shirt tan lines."
+      class="img-cover val-img"
+    />
+    <p>
+      The climbing community is one of the friendliest sporting communities
+      you’ll find. We welcome diversity of all kinds and want you to experience
+      the joy of climbing with us all.
+    </p>
+  </div>
+
+  <div class="card" id="eco">
+    <h2>Being Sustainable</h2>
+    <div class="info">
+      <a
+        href="https://ecologi.com/southsideclimbing?r=643fbaafdb2126bd06110f9c"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="View our Ecologi profile"
+        class="ecologi"
+      >
+        <img
+          alt="We plant trees with Ecologi"
+          src="https://api.ecologi.com/badges/trees/643fbaafdb2126bd06110f9c?black=true&treeOnly=true"
+        /></a
+      >
+      <p>
+        We want to combat climate change by reducing our carbon footprint and
+        preserving the environment. We’ve teamed up with Ecologi to plant trees,
+        we donate every time we sell courses through our website.
+      </p>
+    </div>
+    <div class="list">
+      <h3>Our green choices:</h3>
+      <ul>
+        <li>Printing on recycled materials</li>
+        <li>Using an online waiver system</li>
+        <li>
+          Sourcing <a
+            href="https://www.bluesign.com/en/blog/news/the-rei-sustainability-standards-and-bluesign"
+            >Bluesign</a
+          > climbing ropes
+        </li>
+        <li>Buying Climbing Equipment</li>
+        <li>Supporting local independant businesses</li>
+      </ul>
     </div>
   </div>
 </Frame>

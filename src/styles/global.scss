@@ -113,7 +113,10 @@ br {
     padding: 4px 10px 8px;
 
     h1,
-    h2 {
+    h2,
+    h3,
+    h4,
+    h5 {
         font-size: 35px;
         font-weight: 500;
         color: #19a3de;
@@ -167,7 +170,8 @@ br {
             margin-bottom: 10px;
         }
 
-        picture {
+        picture,
+        .picture {
             display: flex;
             grid-column: 2 / 3;
             grid-row: 1 / 5;
@@ -186,6 +190,10 @@ br {
     .img-cover {
         object-fit: cover;
         height: 95% !important;
+    }
+
+    .img-contain {
+        object-fit: contain;
     }
 
     .grid-1 {
