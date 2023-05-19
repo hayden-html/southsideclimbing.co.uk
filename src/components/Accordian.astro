@@ -1,41 +1,38 @@
 ---
-
 ---
 
 <div class="accordion">
     <slot />
-    
-
 </div>
 <script lang="js">
     var acc = document.getElementsByClassName("question");
-var i;
+    var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var answer = this.nextElementSibling;
-        if (answer.style.maxHeight) {
-            answer.style.maxHeight = null;
-        } else {
-            answer.style.maxHeight = answer.scrollHeight + "px";
-        }
-    });
-}
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var answer = this.nextElementSibling;
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            }
+        });
+    }
 </script>
 
 <style lang="scss">
     .accordion {
-    box-shadow: 0px 5px 10px #9f9f9f;
-    background-color: white;
-    margin: 0 auto;
-    max-width: 760px;
+        box-shadow: 0px 5px 10px #9f9f9f;
+        background-color: white;
+        margin: 0 auto 15px;
+        max-width: 710px;
     }
-    
-@media (max-width: 800px) {
-.accordion {
-    width: calc(85% + 40px);
-}
 
-}
+    @media (max-width: 800px) {
+        .accordion {
+            width: calc(85% + 20px);
+            min-width: 305px;
+        }
+    }
 </style>

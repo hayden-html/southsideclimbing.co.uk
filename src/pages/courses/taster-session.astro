@@ -7,37 +7,48 @@ import Accordian from "../../components/Accordian.astro";
 import Qa from "../../components/parts/Qa.astro";
 import Spec from "../../components/parts/Spec.astro";
 
-import battleship from "../../images/taster-battleship.jpg";
+import sebLower from "../../images/taster-lower.jpg";
+import gallery1 from "../../images/gary-block.jpg";
+import gallery2 from "../../images/group-belay.jpg";
 ---
 
 <Frame
     title={" - Taster Session"}
     description={"This family session is great for to see whether you'd enjoy climbing. You'll get a chance to climb on Portland rock and learn a bit about the sport."}
 >
-    <div class="seshpage card">
+    <div class="session card">
         <h1>Taster Session</h1>
-        <div class="seshpage-options">
-            <Picture
-                src={battleship}
-                widths={[300, 600, 1200]}
-                sizes="(max-width: 768px) 85%, 300px"
-                alt="A young man in an orange helmet, standing in aalert stance while belaying"
-            />
-            <div class="seshpage-info">
-                <Spec
-                    loc="Portland"
-                    duration="3 Hours"
-                    group="Up To 6 Climbers"
-                />
-                <p class="private-text card-text">
-                    Our taster session will give you an introduction to the
-                    sport. We run these sessions in small groups, so you'll have
-                    plenty of time to climb. Unlike our courses, we don't teach
-                    belaying or knot tying in this session.
-                </p>
-            </div>
-            <div class="seshpage-buttons"></div>
-        </div>
+        <Picture
+            src={sebLower}
+            widths={[300, 600, 1200]}
+            sizes="(max-width: 768px) 410px, 480px"
+            alt="A young man in an orange helmet, walking down the rock as he is lowered"
+            class="session-img"
+        />
+        <Spec loc="Portland" duration="3 Hours" group="Up To 6 Climbers" />
+        <p class="private-text card-text">
+            Our taster session will give you an introduction to the sport. We
+            run these sessions in small groups, so you'll have plenty of time to
+            climb. Unlike our courses, we don't teach belaying or knot tying in
+            this session.
+        </p>
+    </div>
+
+    <div class="gallery">
+        <Picture
+            src={gallery1}
+            widths={[324, 500, 1200]}
+            sizes="(max-width: 768px) 90vw, 53vw"
+            alt="Gareth is making his way up a wall, using a hold that he is pulling sideways."
+            class="gallery-private"
+        />
+        <Picture
+            src={gallery2}
+            widths={[324, 500, 1200]}
+            sizes="(max-width: 768px) 90vw, 53vw"
+            alt="A group learning to belay whilst a climber is making the first moves."
+            class="group-belay"
+        />
     </div>
 
     <div class="seshpage-info open-info card">

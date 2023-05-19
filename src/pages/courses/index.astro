@@ -8,6 +8,7 @@ import "./courses.scss";
 import belay from "../../images/learn-belay.jpg";
 import taster from "../../images/taster.jpg";
 import group from "../../images/groups.jpg";
+import kidsClub from "../../images/ryan-qe.jpg";
 ---
 
 <Frame
@@ -19,7 +20,7 @@ import group from "../../images/groups.jpg";
     <Picture
       src={belay}
       widths={[300, 600, 1200]}
-      sizes="(max-width: 768px) 85%, 300px"
+      sizes="405px"
       alt="A young woman climbing up the side of a 10m wall"
       class="img-cover"
     />
@@ -36,7 +37,7 @@ import group from "../../images/groups.jpg";
     <Picture
       src={taster}
       widths={[300, 600, 1200]}
-      sizes="(max-width: 768px) 85%, 300px"
+      sizes="405px"
       alt="Someone at the top of the wall communicating to his belayer"
       class="img-cover"
     />
@@ -49,24 +50,24 @@ import group from "../../images/groups.jpg";
   </div>
 
   <div class="card grid-1" id="coaching">
-    <h2>London Coaching</h2>
-    <picture>
-      <img
-        src="/media/coaching.jpg"
-        alt="Hayden is climbing on an overhanging bouldering wall, using just his finger tips on the small crimps."
-      />
-    </picture>
-    <Spec cost="From £33/hour" />
+    <h2>Kids Club</h2>
+    <Picture
+      src={kidsClub}
+      widths={[300, 600, 1200]}
+      sizes="405px"
+      alt="Someone at the top of the wall communicating to his belayer"
+      class="img-cover"
+    />
+    <Spec cost="£75/ 7 Weeks" loc="QE Lesuire Centre, Wimborne" />
     <p>
-      Coaching is now available at Vauxwall East. Hayden has been coaching
-      climbing for 5 years and is a qualified coach. If you're looking to learn
-      technique or push your grade, he’d love to help.
+      We are starting our kids club this June. The club will teach kids how to
+      climb on a roped wall and build up their climbing skills.
     </p>
-    <a href="/courses/coaching/" class="btn">Book Here</a>
+    <a href="/courses/kids-club/" class="btn">Book Here</a>
   </div>
 
-  <div class="card" id="peak">
-    <h2>Peak District</h2>
+  <!-- <div class="card" id="peak">
+    <h2>Coaching</h2>
     <picture>
       <img
         src="/media/stanage-popular.jpg"
@@ -81,14 +82,14 @@ import group from "../../images/groups.jpg";
     </p>
 
     <a href="/courses/peak-district/" class="btn">Book Here</a>
-  </div>
+  </div> -->
 
   <div class="card grid-1" id="group">
     <h2>Group Bookings</h2>
     <Picture
       src={group}
       widths={[300, 600, 1200]}
-      sizes="(max-width: 768px) 85%, 300px"
+      sizes="405px"
       alt="2 people having a snack break after climbing, the are looking out over Portland and the south coast."
       class="img-cover"
     />

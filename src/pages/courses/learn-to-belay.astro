@@ -1,4 +1,9 @@
 ---
+import { Picture } from "@astrojs/image/components";
+import belaySeb from "../../images/belaying-seb.jpg";
+import privateGuide from "../../images/private-guiding.jpg";
+import block1 from "../../images/block-1.jpg";
+
 import "./learn-belay.scss";
 import Frame from "../../layouts/frame.astro";
 import Accordian from "../../components/Accordian.astro";
@@ -10,72 +15,73 @@ import Spec from "../../components/parts/Spec.astro";
     title={" - Learn to Belay"}
     description={"Are you looking to kickoff your climbing? This course will teach you all there is to climbing and belaying."}
 >
-    <div class="seshpage card">
+    <div class="session card" id="main">
         <h1>Learn to Belay</h1>
-        <div class="seshpage-options">
-            <img
-                class="seshpage-img"
-                src="/media/neddy-hang.jpg"
-                alt="A middle-aged woman smiling whilst suspended off a rope with the sea behind her"
-            />
-            <div class="seshpage-info">
-                <Spec duration="8 Hours" group="Up To 6 Climbers" />
-                <p class="private-text bs-text">
-                    In this course, you’ll learn how to climb and belay each
-                    other on a rope. With these skills, you’ll be able to climb
-                    at your local roped wall on bottom ropes and progress on to
-                    sport climbing. Here in Dorset, our coast is full of
-                    stunning places to climb. We provide all the necessary
-                    safety equipment and our expertise of rock climbing.
-                </p>
-            </div>
-        </div>
+        <Picture
+            src={belaySeb}
+            widths={[324, 500, 1200]}
+            sizes="(max-width: 768px) 410px, 480px"
+            alt="A man belaying next to a block towards its' side"
+        />
+        <Spec class="specs" duration="8 Hours" group="Up To 6 Climbers" />
+        <p class="bs-text">
+            In this course, you’ll learn how to climb and belay each other on a
+            rope. With these skills, you’ll be able to climb at your local roped
+            wall on bottom ropes and progress on to sport climbing. Here in
+            Dorset, our coast is full of stunning places to climb. We provide
+            all the necessary safety equipment and our expertise of rock
+            climbing.
+        </p>
     </div>
-    <div class="seshpage-info private-info card">
-        <h2>Private Guiding</h2>
-        <div class="seshpage-info">
-            <Spec
-                loc="Swanage Or Portland"
-                age="Ages 7 & Up"
-                cost="From £160"
-            />
-            <p class="private-text bs-text">
-                On booking, you will have the choice of either climbing at
-                Portland or Swanage. Each of these locations have multiple
-                crags, we like to choose where the best conditions are to climb,
-                but if you have a preference of crag, just let us know.
-            </p>
 
-            <div class="seshpage-buttons">
-                <script
-                    is:inline
-                    src="https://assets.ticketinghub.com/checkout.js"
-                    data-widget="38de41bd-8ac6-4d43-b14a-1bbc49333c8f"
-                    data-ga-track-pageviews="false"
-                ></script>
-            </div>
-        </div>
+    <div class="gallery">
+        <Picture
+            src={privateGuide}
+            widths={[324, 500, 1200]}
+            sizes="(max-width: 768px) 90vw, 53vw"
+            alt="hayden is showing a participant how to belay"
+            class="gallery-private"
+        />
+        <Picture
+            src={block1}
+            widths={[324, 500, 1200]}
+            sizes="(max-width: 768px) 90vw, 53vw"
+            alt="Harry is using his climbing shoes to step on to small edges on the wall."
+            class="gallery-block1"
+        />
+    </div>
+
+    <div class="card" id="private">
+        <h2>Private Guiding</h2>
+        <Spec loc="Swanage Or Portland" age="Ages 7 & Up" cost="From £160" />
+        <p class="private-text bs-text">
+            On booking, you will have the choice of either climbing at Portland
+            or Swanage. Each of these locations have multiple crags, we like to
+            choose where the best conditions are to climb, but if you have a
+            preference of crag, just let us know.
+        </p>
+        <script
+            is:inline
+            src="https://assets.ticketinghub.com/checkout.js"
+            data-widget="38de41bd-8ac6-4d43-b14a-1bbc49333c8f"
+            data-ga-track-pageviews="false"
+        ></script>
     </div>
     <div class="seshpage-info open-info card">
         <h2>Open Session</h2>
-        <div class="seshpage-info">
-            <Spec loc="Portland" age="Ages 12 & Up" cost="£50/Per Climber" />
-            <p class="private-text bs-text">
-                These courses are great for meeting new people who also want to
-                start climbing. We run our open courses on the last Sunday of
-                every month at Portland. There are 6 spaces per instructor, so
-                you're guaranteed plenty of time on the rock!
-            </p>
-
-            <div class="seshpage-buttons">
-                <script
-                    is:inline
-                    src="https://assets.ticketinghub.com/checkout.js"
-                    data-widget="05471900-18fd-410c-895f-6e97b0f196c7"
-                    data-ga-track-pageviews="false"
-                ></script>
-            </div>
-        </div>
+        <Spec loc="Portland" age="Ages 12 & Up" cost="£50/Per Climber" />
+        <p class="private-text bs-text">
+            These courses are great for meeting new people who also want to
+            start climbing. We run our open courses on the last Sunday of every
+            month at Portland. There are 6 spaces per instructor, so you're
+            guaranteed plenty of time on the rock!
+        </p>
+        <script
+            is:inline
+            src="https://assets.ticketinghub.com/checkout.js"
+            data-widget="05471900-18fd-410c-895f-6e97b0f196c7"
+            data-ga-track-pageviews="false"
+        ></script>
     </div>
 
     <div class="included card">

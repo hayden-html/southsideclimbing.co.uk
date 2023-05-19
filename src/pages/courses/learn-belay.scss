@@ -1,182 +1,243 @@
 // sass --watch ./courses/learn-belay.scss ./asset/css/learn-belay.css
 h2 {
     font-size: 35px !important;
+
     @media (max-width: 780px) {
         font-size: 30px !important;
     }
 }
-.private {
+
+#private {
 
     &-info {
-        // flex: 3;
         display: block;
-    }
-
-    &-img {
-        // flex: 3;
-        width: 400px;
-        height: max-content;
-        margin: 20px;
     }
 }
 
-.seshpage {
+#main {
+    .specs {
+        display: flex !important;
+    }
+}
 
-    &-img {
-        margin-top: 5px;
-        display: block;
+.session {
+    img {
         width: 100%;
-        margin-bottom: 8px;
     }
 
-    &-desc {
-        display: inline-block;
-        font-weight: 600;
-        font-size: 1.4em;
-        color: rgb(60, 60, 60);
-    }
-
-    strong {
-        margin-bottom: 5px;
-    }
-
-    &-info {
-        padding: 0 10px 0 0;
-    }
-
-    &-buttons {
-        display: block;
-        margin-bottom: 8px;
-    }
-
-    // just for coaching
-
-    .square-img {
-        width: 350px;
-        @media(max-width: 800px) {
-            margin: 0 auto;
-        }
-        @media(max-width: 800px) {
-            width: 90%;
-        }
-    }
-
-    .img-li {
+    &-gallery {
         display: flex;
-        ul {
-            margin: auto 0;
-        }
-        li {
-            font-size: 1.3em;
-            font-weight: 500;
-            margin: 10px 0;
-        }
+        gap: 10px;
 
-        @media(max-width: 800px) {
-            display: block;
-            margin-bottom: 10px;
-            ul {
-                display: none;
-            }
-        }
+    }
+}
+
+#kids-club {
+
+    .ryan,
+    .cici {
+        object-position: 0 70%;
     }
 
+    .cici {
+        transform: scaleX(-1);
+    }
+}
+
+.square {
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    width: auto;
+}
 
 
+strong {
+    margin-bottom: 5px;
+}
+
+// just for coaching
+
+.square-img {
+    width: 350px;
+
+    @media(max-width: 800px) {
+        margin: 0 auto;
+    }
+
+    @media(max-width: 800px) {
+        width: 90%;
+    }
+}
+
+.img-li {
+    display: flex;
+
+    ul {
+        margin: auto 0;
+    }
+
+    li {
+        font-size: 1.3em;
+        font-weight: 500;
+        margin: 10px 0;
+    }
+
+    @media(max-width: 800px) {
+        display: block;
+        margin-bottom: 10px;
+
+        ul {
+            display: none;
+        }
+    }
 }
 
 .included {
-    display: flex;
+    display: block;
     justify-content: space-evenly;
     height: max-content;
 
     .gear {
-        display: block;
-        padding: 20px;
-        width: 40%;
+        width: fit-content;
+        display: flex;
+        margin: 10px auto 0;
 
         &-img {
             display: block;
-            width: 50%;
-            margin: 0 auto;
+            width: 80px;
+            margin: auto 20px auto 0px;
+
         }
 
         &-text {
-            display: block;
-            width: fit-content;
-            font-size: 1.4em;
-            margin: 10px auto;
-            text-align: center;
+            font-size: 1.8em;
+            text-align: start;
+            margin: auto 0;
         }
     }
 
     .bring {
-        width: 48%;
-        padding: 20px;
+        width: max-content;
+        margin: 0 auto;
+        padding: 0 0 5px;
 
-        &-title {
-            font-size: 1.5em;
+        ul {
+            margin: 0;
+            padding-left: 20px;
         }
 
         li {
-            font-size: 1.2em;
-            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        img {
+            width: 30%;
         }
 
     }
+
     .divide {
         // border-color: #bdbdbd;
         background-color: #bdbdbd;
         border-radius: 5px;
-        width: 2px;
-        // height: 100%;
+        width: 90%;
+        height: 2px;
         display: block;
-        margin: 10px 5px;
-
+        margin: 10px auto;
     }
 }
 
-@media (max-width: 730px) {
+.gallery {
+    width: min-content;
+    display: flex;
+    margin: 8px auto 12px;
+
+    &-private {
+        // height: 300px;
+        width: clamp(300px, 90vw, 500px);
+        aspect-ratio: 46 / 26;
+        object-fit: cover;
+        object-position: 0 35%;
+    }
+
+    &-block1,
+    .group-belay {
+        display: none;
+    }
+}
+
+@media (min-width: 830px) {
+    .gallery {
+        &-private {
+            height: 300px;
+            margin-right: 5px;
+        }
+
+        &-block1,
+        .group-belay {
+            display: block;
+            height: 300px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        .group-belay {
+            object-position: 0 80%;
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+
     .included {
-        display: block;
+        display: flex;
+        justify-content: space-evenly;
+
         .gear {
-            width: 95%;
-            display: flex;
-            margin: 0 auto;
+            display: block;
+            padding: 20px;
+            width: 40%;
+
             &-img {
-                width: 80px;
-                margin: auto 20px auto 0px;
+                display: block;
+                width: 50%;
+                margin: 0 auto;
             }
+
             &-text {
-                // width: ;
-                font-size: 1.8em;
-                text-align: start;
-                margin: auto 0;
+                display: block;
+                width: fit-content;
+                font-size: 22px;
+                margin: 10px auto;
+                text-align: center;
             }
         }
 
         .bring {
-            width: max-content;
-            margin: 0 auto;
-            padding: 0 20px;
+            width: 48%;
+            padding: 20px;
+            margin: 10px 0;
+
+            &-title {
+                font-size: 1.5em;
+            }
+
+            li {
+                font-size: 1.2em;
+                margin-bottom: 5px;
+            }
 
             ul {
-                margin: 0;
-                padding-left: 20px;
+                margin-left: 20px;
             }
+
         }
+
         .divide {
-            height: 2px;
-            width: 90%;
+            width: 2px;
+            height: auto;
         }
-    }
-}
 
-@media (max-width: 880px) {
-
-    .seshpage {
-        &-info {
-            padding: 0 0 5px;
-        }
     }
 }

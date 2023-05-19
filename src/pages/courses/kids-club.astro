@@ -1,0 +1,84 @@
+---
+import { Picture } from "@astrojs/image/components";
+
+import "./learn-belay.scss";
+import Frame from "../../layouts/frame.astro";
+import Accordian from "../../components/Accordian.astro";
+import Qa from "../../components/parts/Qa.astro";
+import Spec from "../../components/parts/Spec.astro";
+
+import fistBump from "../../images/fist-bumb.jpg";
+import ryan from "../../images/ryan-qe.jpg";
+import cici from "../../images/kc-cici.jpg";
+---
+
+<Frame
+    title={" - Kids Club"}
+    description={"Our after school club runs on Fridays. We teach kids aged 9-14 how to rock climb using ropes at QE Leisure Centre in Wimborne."}
+>
+    <div class="session card" id="kids-club">
+        <h1>Kids Club</h1>
+        <div class="session-gallery">
+            <Picture
+                src={cici}
+                widths={[324, 500, 1200]}
+                sizes="(max-width: 768px) 410px, 480px"
+                alt="A man belaying next to a block towards its' side"
+                class="square cici"
+            />
+            <Picture
+                src={ryan}
+                widths={[324, 500, 1200]}
+                sizes="(max-width: 768px) 410px, 480px"
+                alt="A man belaying next to a block towards its' side"
+                class="square ryan"
+            />
+        </div>
+        <Spec loc="QE Lesuire Centre, Wimborne" group="Kids Aged 9-15" />
+        <p>
+            We are excited to start our first junior club at QE Leisure Centre
+            in Wimborne. The kids will learn how to climb on roped walls and
+            develop their climbing techniques. Hayden, the instructor, has over
+            7 years of coaching experience and is passionate about getting kids
+            climbing!
+            <br />
+            The club will run on Fridays after school from 5:45pm – 7:15pm & 7:30pm
+            – 9:00pm. Each club will run at a maximum of 6 kids per class. Each class
+            is £11 and bookings are paid upfront in blocks, alongside the half-terms.
+        </p>
+        <a href="https://forms.gle/R6NJF63JpgcGrnue9" class="btn">Sign Up</a>
+    </div>
+    <Picture
+        src={fistBump}
+        widths={[324, 500, 1200]}
+        sizes="(max-width: 768px) 410px, 480px"
+        alt="A man belaying next to a block towards its' side"
+        class="gallery"
+    />
+
+    <div class="included card">
+        <div class="gear">
+            <img
+                class="gear-img"
+                src="/media/icons/helmet.svg"
+                alt="helmet icon"
+            />
+            <div class="gear-text">All Equipment Included</div>
+        </div>
+    </div>
+
+    <Accordian>
+        <Qa question="Do parents need to be present during the session?">
+            No, Parents and guardians can drop off and leave the children for
+            the duration of the session. Parents can stay and watch.
+        </Qa>
+        <Qa question="Does my child need any prior experience?">
+            No, They just need to be eager to climb!
+        </Qa>
+        <Qa question="What should we bring to the session?">
+            Bring a bottle of water and make sure that the climbers are wearing
+            flexible clothing and closed toe shoes. We will provide helmets and
+            harnesses, the kids are welcome to bring their own equipment.
+        </Qa>
+    </Accordian>
+</Frame>
