@@ -7,25 +7,46 @@ const { loc, duration, group, cost, age } = Astro.props;
     <div class="specs">
       {group && (
         <div class="line">
-          <img src="/media/icons/people.svg" alt="group icon" />
+          <img
+            src="/media/icons/people.svg"
+            alt="group icon"
+            height="21"
+            width="21"
+          />
           <div class="stat">{group}</div>
         </div>
       )}
       {age && (
         <div class="line">
-          <img src="/media/icons/check-lg.svg" alt="Tick" id="tick" />
+          <img
+            src="/media/icons/check-lg.svg"
+            alt="Tick"
+            id="tick"
+            height="21"
+            width="21"
+          />
           <div class="stat">{age}</div>
         </div>
       )}
       {loc && (
         <div class="line">
-          <img src="/media/icons/location.svg" alt="location icon" />
+          <img
+            src="/media/icons/location.svg"
+            alt="location icon"
+            height="21"
+            width="21"
+          />
           <div class="stat">{loc}</div>
         </div>
       )}
       {duration && (
         <div class="line">
-          <img src="/media/icons/time.svg" alt="clock icon" />
+          <img
+            src="/media/icons/time.svg"
+            alt="clock icon"
+            height="21"
+            width="21"
+          />
           <div class="stat">{duration}</div>
         </div>
       )}
@@ -33,8 +54,9 @@ const { loc, duration, group, cost, age } = Astro.props;
         <div class="line">
           <img
             src="/media/icons/ticket-fill.svg"
-            alt="pound symbol"
-            id="cost"
+            alt="ticket symbol"
+            height="21"
+            width="21"
           />
           <div class="stat">{cost}</div>
         </div>
@@ -46,34 +68,34 @@ const { loc, duration, group, cost, age } = Astro.props;
 <style lang="scss">
   .specs {
     display: flex;
-    flex-wrap: wrap;
-    // max-width: 100%;
+    // flex-wrap: wrap;
     margin-bottom: 5px;
   }
   .line {
-    margin: 0 12px 5px 0;
     width: max-content;
     display: flex;
+    margin: 0 12px 0 0;
     img {
+      min-width: 21px;
+      aspect-ratio: 1 / 1;
       display: block;
-      height: 21px;
-      margin: auto 5px auto 0;
+      margin: auto 3px auto 0;
       padding: 2px 0;
     }
     .stat {
       font-weight: 500;
       color: #2e2e2e;
-      display: block;
       min-width: max-content;
-      margin: auto 0 1px;
+      display: block;
+      margin: auto 0;
       font-size: 18px;
     }
   }
 
-  #cost,
-  #tick {
-    height: 17px;
-  }
+  // #cost,
+  // #tick {
+  //   height: 17px;
+  // }
 
   @media (min-width: 768px) {
     .specs {
