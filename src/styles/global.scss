@@ -145,8 +145,10 @@ br {
 }
 
 .grid-1 {
-    img {
+    picture img {
         width: min(405px, 85%);
+        height: 100%;
+        aspect-ratio: 405 / 270;
     }
 }
 

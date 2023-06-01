@@ -8,25 +8,25 @@ const { loc, duration, group, cost, age } = Astro.props;
       {group && (
         <div class="line">
           <img src="/media/icons/people.svg" alt="group icon" />
-          <h6>{group}</h6>
+          <div class="stat">{group}</div>
         </div>
       )}
       {age && (
         <div class="line">
           <img src="/media/icons/check-lg.svg" alt="Tick" id="tick" />
-          <h6>{age}</h6>
+          <div class="stat">{age}</div>
         </div>
       )}
       {loc && (
         <div class="line">
           <img src="/media/icons/location.svg" alt="location icon" />
-          <h6>{loc}</h6>
+          <div class="stat">{loc}</div>
         </div>
       )}
       {duration && (
         <div class="line">
           <img src="/media/icons/time.svg" alt="clock icon" />
-          <h6>{duration}</h6>
+          <div class="stat">{duration}</div>
         </div>
       )}
       {cost && (
@@ -36,7 +36,7 @@ const { loc, duration, group, cost, age } = Astro.props;
             alt="pound symbol"
             id="cost"
           />
-          <h6>{cost}</h6>
+          <div class="stat">{cost}</div>
         </div>
       )}
     </div>
@@ -60,7 +60,7 @@ const { loc, duration, group, cost, age } = Astro.props;
       margin: auto 5px auto 0;
       padding: 2px 0;
     }
-    h6 {
+    .stat {
       font-weight: 500;
       color: #2e2e2e;
       display: block;

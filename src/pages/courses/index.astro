@@ -2,7 +2,7 @@
 import { Picture } from "@astrojs/image/components";
 
 import Frame from "../../layouts/frame.astro";
-import Spec from "../../components/parts/Spec.astro";
+import Spec from "../../components/Spec.astro";
 import "./courses.scss";
 
 import belay from "../../images/learn-belay.jpg";
@@ -23,6 +23,7 @@ import kidsClub from "../../images/ryan-qe.jpg";
       sizes="405px"
       alt="A young woman climbing up the side of a 10m wall"
       class="img-cover"
+      loading="eager"
     />
     <Spec loc="Swanage & Portland" duration="6 Hours" group="Upto 6 climbers" />
     <p>
@@ -40,6 +41,7 @@ import kidsClub from "../../images/ryan-qe.jpg";
       sizes="405px"
       alt="Someone at the top of the wall communicating to his belayer"
       class="img-cover"
+      loading="eager"
     />
     <Spec loc="Portland" duration="3 hours" group="Upto 6 Climbers" />
     <p>
@@ -49,7 +51,7 @@ import kidsClub from "../../images/ryan-qe.jpg";
     <a href="/courses/taster-session" class="btn">Book Here</a>
   </div>
 
-  <div class="card grid-1" id="coaching">
+  <div class="card grid-1" id="kids-club">
     <h2>Kids Club</h2>
     <Picture
       src={kidsClub}

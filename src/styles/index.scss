@@ -18,71 +18,72 @@
 //     }
 // }
 
-main {
+.hero {
+    margin: 0 auto 15px;
 
-    .hero {
-        margin: 0 auto 15px;
+    &-text {
+        display: none;
+    }
 
-        &-text {
-            display: none;
-        }
+    picture {
+        display: flex;
+    }
 
-        picture {
-            display: flex;
-        }
-
-        &-img {
-            width: 96svw;
-            height: 100%;
-            aspect-ratio: 2 / 1;
-            display: block;
-            order: 1;
-            margin: 0 auto;
-            object-fit: cover;
-        }
+    &-img {
+        width: 96svw;
+        height: 100%;
+        aspect-ratio: 2 / 1;
+        display: block;
+        order: 1;
+        margin: 0 auto;
+        object-fit: cover;
     }
 }
 
+// .img-cover {
+//     aspect-ratio: 405 / 270;
+//     height: 100%;
+// }
+
 
 @media (min-width: 768px) {
-    main {
-        .hero {
-            display: flex;
-            width: max-content;
-            flex-wrap: wrap;
+    .hero {
+        display: flex;
+        width: max-content;
+        flex-wrap: wrap;
 
-            &-text {
-                background-color: white;
-                width: min-content;
-                display: block;
-                margin: auto 0;
-                padding: 20px 30px 20px 20px;
-                box-shadow: 0px 5px 10px rgb(159, 159, 159);
-                font-family: 'Noto-Sans', sans-serif;
-                font-size: min(80px, 6vw);
-                line-height: min(105px, 7vw);
-                font-weight: 600;
-                color: #0A96DE;
-                word-spacing: 100vw;
-            }
-
-            &-img {
-                aspect-ratio: 17 / 9;
-                width: clamp(405px, 53vw, 850px);
-                margin: auto 0;
-            }
+        &-text {
+            background-color: white;
+            width: min-content;
+            display: block;
+            margin: auto 0;
+            padding: 20px 30px 20px 20px;
+            box-shadow: 0px 5px 10px rgb(159, 159, 159);
+            font-family: 'Noto-Sans', sans-serif;
+            font-size: min(80px, 6vw);
+            line-height: min(105px, 7vw);
+            font-weight: 600;
+            color: #0A96DE;
+            word-spacing: 100vw;
         }
 
-        #courses {
-            picture img {
-                object-position: 40% 0;
-            }
-        }
-
-        #about {
-            picture img {
-                object-position: 35% 0;
-            }
+        &-img {
+            aspect-ratio: 17 / 9;
+            width: clamp(405px, 53vw, 850px);
+            margin: auto 0;
         }
     }
+
+    #courses {
+        picture img {
+            object-position: 40% 0;
+        }
+    }
+
+    #about {
+        picture img {
+            object-position: 35% 0;
+        }
+    }
+
 }

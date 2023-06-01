@@ -4,6 +4,14 @@
     }
 }
 
+#kids-club {
+    picture img {
+        object-fit: cover;
+        aspect-ratio: 1 / .9;
+        object-position: 0 45%;
+    }
+}
+
 @media(min-width: 768px) {
     #L2B {
         picture img {
