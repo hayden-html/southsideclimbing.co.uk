@@ -1,20 +1,24 @@
 ---
-
-const { question } = Astro.props
+const { question } = Astro.props;
 
 export interface Props {
-  question: string;
+    question: string;
 }
 ---
 
-<div class="question" id="question"><p>{question}</p><img class="question-arr" src="/media/icons/down-arr.svg"> </div>
-<div class="answer">
-  <p><slot/></p>
+<div class="question" id="question">
+    <p>{question}</p><img
+        class="question-arr"
+        src="/media/icons/down-arr.svg"
+    />
 </div>
-
+<div class="answer">
+    <p><slot /></p>
+</div>
 
 <style lang="scss">
     .question {
+        width: 98%;
         background-color: rgb(255, 255, 255);
         color: rgb(68, 68, 68);
         cursor: pointer;
@@ -35,6 +39,7 @@ export interface Props {
         // }
 
         &-arr {
+            height: 100%;
             width: 30px;
             float: right;
             margin: auto 0;
@@ -42,8 +47,6 @@ export interface Props {
             color: #0182b1;
             display: block;
             transition: 150ms;
-
-
         }
     }
 
@@ -77,7 +80,7 @@ export interface Props {
         }
     }
 
-    @media(max-width: 780px){
+    @media (max-width: 780px) {
         .question {
             font-size: 15px;
         }
@@ -86,5 +89,4 @@ export interface Props {
             font-size: 14px;
         }
     }
-
 </style>

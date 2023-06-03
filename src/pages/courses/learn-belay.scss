@@ -148,7 +148,8 @@ strong {
 }
 
 .gallery {
-    width: min-content;
+    width: 75vw;
+    max-width: 650px;
     display: flex;
     margin: 8px auto 12px;
 
