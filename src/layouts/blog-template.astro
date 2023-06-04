@@ -1,0 +1,20 @@
+---
+import Frame from "./frame.astro";
+---
+
+<Frame>
+    <article>
+        <slot class="blog" />
+    </article>
+</Frame>
+
+<style lang="scss">
+    article {
+        background-color: white;
+        margin: 0px auto 15px;
+        box-shadow: 0px 2px 10px #9f9f9f;
+        width: clamp(285px, 85%, 660px);
+        height: auto;
+        padding: 4px 10px 8px;
+    }
+</style>
