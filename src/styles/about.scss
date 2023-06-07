@@ -10,13 +10,19 @@
         margin-bottom: 5px;
     }
 
-    ul,
-    p {
+    ul {
         font-size: 1.15em;
-    }
 
-    p {
-        padding-left: 20px;
+        .li-plus {
+            list-style-type: "+ ";
+            margin: 0 auto;
+
+            &::marker {
+                font-family: "Noto-Sans", sans-serif;
+                font-weight: 600;
+                // font-size: 25px;
+            }
+        }
     }
 
 }

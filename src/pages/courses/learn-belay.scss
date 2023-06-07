@@ -110,6 +110,8 @@ strong {
         }
 
         &-text {
+            min-width: 200px;
+            width: min-content;
             font-size: 1.8em;
             text-align: start;
             margin: auto 0;
@@ -148,13 +150,11 @@ strong {
 }
 
 .gallery {
-    width: 75vw;
-    max-width: 650px;
+    width: min-content;
     display: flex;
     margin: 8px auto 12px;
 
     &-private {
-        // height: 300px;
         width: clamp(300px, 90vw, 500px);
         aspect-ratio: 46 / 26;
         object-fit: cover;

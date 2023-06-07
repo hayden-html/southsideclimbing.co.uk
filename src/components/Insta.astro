@@ -30,13 +30,19 @@ import insta3 from "../images/insta-3.jpg";
     alt="A man half way up a route in the shade with the sunlight just about his head"
     class="slide s3"
   />
+  <img
+    src="./media/icons/instagram.svg"
+    alt="instagram icon"
+    class="insta-logo"
+  />
 </a>
 
 <style lang="scss">
   .insta-slides {
+    position: relative;
+    width: fit-content;
     display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
     .s3 {
       display: none;
     }
@@ -47,6 +53,13 @@ import insta3 from "../images/insta-3.jpg";
       object-fit: cover;
       aspect-ratio: 1 / 1;
     }
+
+    .insta-logo {
+      width: 25px;
+      position: absolute;
+      bottom: 15px;
+      right: 12px;
+    }
     @media (min-width: 555px) {
       margin-bottom: 20px;
       .slide {
@@ -54,6 +67,10 @@ import insta3 from "../images/insta-3.jpg";
       }
       .s3 {
         display: block;
+      }
+
+      .insta-logo {
+        width: 35px;
       }
     }
   }
