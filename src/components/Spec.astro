@@ -1,5 +1,5 @@
 ---
-const { loc, duration, group, cost, age, class: className } = Astro.props;
+const { loc, duration, group, cost, age, class: className = "" } = Astro.props;
 ---
 
 {
@@ -70,6 +70,9 @@ const { loc, duration, group, cost, age, class: className } = Astro.props;
     display: block;
     flex-wrap: wrap;
     margin-bottom: 5px;
+    .line {
+      margin-right: 10px;
+    }
   }
   .line {
     width: max-content;
