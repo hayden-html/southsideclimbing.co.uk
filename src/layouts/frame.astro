@@ -8,16 +8,16 @@ const { title, description } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-		<meta name="ExtraHead" />
-		<link rel="sitemap" href="/sitemap-index.xml" />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<slot />
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={title} description={description} />
+    <meta name="ExtraHead" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
