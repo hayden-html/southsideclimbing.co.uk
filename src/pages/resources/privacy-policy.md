@@ -1,5 +1,5 @@
 ﻿---
-layout: '../../layouts/blog-template.astro'
+layout: '@/layouts/blog-template.astro'
 title: 'Southside Climbing - Privacy Policy'
 description: 'Here is our privacy policy, please read through this carefully.'
 ---
