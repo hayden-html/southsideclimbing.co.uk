@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Pandore', sans-serif;
+    src: url('./Pandore.woff2') format('woff2'), url('./Pandore.woff') format('woff');
+    font-display: swap;
+}
+
+
+body {
+    //avoid scrolling to mob nav
+    overflow-x: hidden;
+}
+
+.btn {
+    color: #004fa6;
+    font-family: "Noto Sans JP Variable", sans-serif;
+    text-decoration: none;
+    background-color: #fefefe;
+    padding: 0.4em 0.5em;
+    border-radius: 0.4em;
+    box-shadow: 0.2em 0.2em #0d5097;
+    font-weight: 800;
+
+    &:hover {
+        box-shadow: 0.25em 0.25em 0 #03397280;
+        background-color: #fbd40f;
+        color: #004fa6;
+    }
+
+    &:active,
+    &:focus {
+        color: #9c7903;
+    }
+}
