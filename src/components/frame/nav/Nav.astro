@@ -3,12 +3,11 @@
 ---
 
 <nav class="nav-main">
-  <a href="/" class="logo">
-    <img src="/media/logo/logo.png" alt="Wave Logo" class="logo_wave" />
+  <a href="/" class="home">
     <img
-      src="/media/logo/title-white.svg"
+      src="/media/logo/logo+white-title.svg"
       alt="Southside Climbing"
-      class="logo_title"
+      class="logo"
     />
   </a>
 
@@ -16,7 +15,7 @@
     <li><a href="/about">About</a></li>
     <li><a href="/blog">Blog</a></li>
     <div class="dropdown">
-      <li class="dropdown-title"><span>Climbing</span></li>
+      <li class="dropdown-title"><a href="/climbing">Climbing</a></li>
       <ul class="dropdown-list">
         <li>
           <a href="/courses">Outdoor Courses</a>
@@ -148,55 +147,47 @@
     background-color: rgb(0, 79, 166);
     display: flex;
     justify-content: space-between;
-    padding: 0 0.5rem;
+    padding: 0.5em 0.5em 0;
   }
 
   .logo {
     display: flex;
     margin: auto 0;
-
-    &_wave {
-      width: clamp(30px, 9vw, 45px);
-      aspect-ratio: 1/1;
-      margin-right: clamp(5px, 2vw, 10px);
-    }
-
-    &_title {
-      width: clamp(200px, 60vw, 320px);
-    }
+    height: clamp(1.75rem, 2vw + 1rem, 2.5rem);
   }
   .links {
     font-family: "Noto Sans JP Variable", sans-serif;
-    font-size: 24px;
+    font-size: clamp(1.2rem, 1vw + 0.5rem, 1.5rem);
     font-weight: 500;
-    min-height: 70px;
     display: flex;
     align-items: flex-end;
-
+    max-height: 100%;
     li {
       margin-right: 15px;
-      padding: 0 0 1rem;
+      padding-bottom: 0.5em;
     }
 
-    a,
-    li {
+    a {
       color: #fefefe;
       text-decoration: none;
       list-style-type: none;
       transition: 0.2s;
-    }
-
-    a:hover,
-    li:hover {
-      color: #fbd40f;
-      transition: 0.2s;
+      &:hover {
+        color: #fbd40f;
+        transition: 0.2s;
+      }
+      &:focus {
+        outline: none;
+        text-decoration: underline 0.01em #fefefe;
+      }
     }
   }
 
   .dropdown {
     &:hover,
-    &:focus {
+    &:active {
       .dropdown-list {
+        padding-top: 0.1em;
         display: block !important;
         max-height: 500px;
         transition: max-height 0.3s ease-out;
@@ -213,6 +204,7 @@
       transition: max-height 0.3s;
 
       li {
+        font-size: 0.9em;
         margin: 0;
         padding: 0 15px 10px;
       }
@@ -239,7 +231,7 @@
 
     .burger {
       display: block;
-      width: clamp(25px, 6vw, 35px);
+      width: clamp(25px, 6vw, 30px);
       fill: #fefefe;
     }
 
@@ -254,9 +246,7 @@
       z-index: 2;
       top: 0;
       right: 0;
-      //   transform: none;
       transform: translateX(100dvw);
-
       transition: transform 300ms ease-in;
 
       li {
@@ -315,8 +305,6 @@
 
     .panel-slide_in-right {
       transform: none;
-      //   transform: translateX(100dvw);
-
       transition: transform 350ms ease-out;
     }
   }

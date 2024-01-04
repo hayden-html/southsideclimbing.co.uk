@@ -1,37 +1,63 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+//: buttons :focus
+
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
 
 @font-face {
     font-family: 'Pandore', sans-serif;
-    src: url('./Pandore.woff2') format('woff2'), url('./Pandore.woff') format('woff');
+    src: url('/fonts/pandore.woff2') format('woff2'), url('/fonts/pandore.woff') format('woff');
     font-display: swap;
 }
+
 
 
 body {
     //avoid scrolling to mob nav
     overflow-x: hidden;
+    background-color: #fefefe;
 }
 
 .btn {
     color: #004fa6;
     font-family: "Noto Sans JP Variable", sans-serif;
+    font-size: clamp(.1em, 1.75vw, .3em);
+
     text-decoration: none;
     background-color: #fefefe;
-    padding: 0.4em 0.5em;
+    padding: 0.3em 0.5em .4em;
     border-radius: 0.4em;
     box-shadow: 0.2em 0.2em #0d5097;
     font-weight: 800;
+    transition: .2s;
 
     &:hover {
-        box-shadow: 0.25em 0.25em 0 #03397280;
         background-color: #fbd40f;
         color: #004fa6;
+        outline: none;
     }
 
-    &:active,
     &:focus {
-        color: #9c7903;
+        outline: none;
+    }
+
+    &:active {
+        color: #fefefe;
+        background-color: #fbd40f;
+        box-shadow: 0.25em 0.25em 0 #03397280;
+
+    }
+}
+
+h1 {
+    font-size: clamp(2rem, 2vw + 2rem, 5.5rem);
+    display: block;
+    font-family: "Pandore", sans-serif;
+    line-height: 110%;
+    margin-bottom: 0.05em;
+    color: #fefefe;
+
+    .highlight {
+        color: #fbd40f;
     }
 }
